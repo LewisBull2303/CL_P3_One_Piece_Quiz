@@ -41,7 +41,6 @@ def check_user() -> str:
         get_email()
         print(f'\nYour email is {email}\n')
         player_login()
-        register_user()
         return True
 
     elif response == '2' or response == 'n':
@@ -103,6 +102,7 @@ def register_user():
     """
     user_details.append(name)
     user_details.append(email)
+    print(user_details)
     USER_SHEET.append_row(user_details)
 
 def player_login():
