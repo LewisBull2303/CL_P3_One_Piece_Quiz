@@ -154,7 +154,23 @@ def main_menu():
         exit()
 
 def leaderboard():
-    print()
+    print(get_player_stats)
+    add_score = input("Would you like to add your score to the scoreboard? Y or N\n").lower()
+
+    if add_score == "y":
+        clear_screen()
+        update_leaderboard()
+        return True
+    
+    elif add_score == "n":
+        print("Okay... returning to the main menu...")
+        clear_screen()
+        main_menu()
+        return False
+    
+    else:
+        print("Please choose a correct option Y or N")
+        leaderboard()
 
 def update_leaderboard():
     """
