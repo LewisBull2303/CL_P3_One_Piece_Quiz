@@ -63,6 +63,16 @@ def quiz_start():
     """
     questions_list = random.sample(questions)
     global score
+    score = 0
+    for question in questions_list:
+        answer = input(question.cue).lower()
+        if answer not in {"1", "2", "3", "4"}:
+            print("Wrong Answer!\n Please use 1, 2 or 3 to answer!")
+        elif answer == question.answer:
+            score += 1
+            print("\nCorrect!\n")
+        else:
+            print("\nWrong Answer!")
 
 
 
