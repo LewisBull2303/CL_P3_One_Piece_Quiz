@@ -169,7 +169,7 @@ questions_call = [
      3) Kiseki Kingdom\n ",
 
     "What is the name of the island where the Revolutionary Army's base is located?\n \
-    1) Baltigo\n \
+    1) Momoiro Island\n \
     2) Kuraigana Island\n \
     3) Ruskaina Island\n "
 
@@ -235,5 +235,34 @@ questions_call = [
 ]
 
 questions = [
-
+    questions_answer(questions_call[0], "1"),
+    questions_answer(questions_call[1], "1"),
+    questions_answer(questions_call[2], "3"),
+    questions_answer(questions_call[3], "2"),
+    questions_answer(questions_call[4], "2"),
+    questions_answer(questions_call[5], "3"),
+    questions_answer(questions_call[6], "1"),
+    questions_answer(questions_call[7], "1"),
+    questions_answer(questions_call[8], "2"),
+    questions_answer(questions_call[9], "2"),
+    questions_answer(questions_call[10], "2"),
+    questions_answer(questions_call[11], "1"),
+    questions_answer(questions_call[12], "3"),
+    questions_answer(questions_call[13], "1"),
+    questions_answer(questions_call[14], "1"),
+    questions_answer(questions_call[15], "3"),
+    questions_answer(questions_call[16], "1"),
+    questions_answer(questions_call[17], "1"),
+    questions_answer(questions_call[18], "3"),
+    questions_answer(questions_call[19], "1"),
+    questions_answer(questions_call[20], "3"),
+    questions_answer(questions_call[21], "2"),
+    questions_answer(questions_call[22], "2"),
+    questions_answer(questions_call[23], "2"),
+    questions_answer(questions_call[24], "3"),
+    questions_answer(questions_call[25], "3"),
+    questions_answer(questions_call[26], "1"),
+    questions_answer(questions_call[27], "3"),
+    questions_answer(questions_call[28], "3"),
+    questions_answer(questions_call[29], "3")
 ]
