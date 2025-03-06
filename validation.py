@@ -17,11 +17,11 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
 SCOREBOARD = SHEET.worksheet('scores')
-USER_SHEET = SHEET.worksheet('players')
+USER_SHEET = SHEET.worksheet('users')
 
 name = ''
 email = ''
-player_details = []
+user_details = []
 
 def check_user() -> str:
     """
@@ -41,13 +41,13 @@ def check_user() -> str:
         get_email()
         print(f'\nYour email is {email}\n')
         player_login()
-        register_player()
+        register_user()
         return True
 
     elif response == '2' or response == 'n':
         print('You answered no\n')
         get_email()
-        validate_user_email()
+        validate_user_email(email)
         get_user_name()
         return False
 
@@ -95,14 +95,15 @@ def get_user_name():
         print('\nEmail was not found in past player records, adding now')
         player_login()
 
-def register_player():
+def register_user():
     """
     This function will add the new players to the spreadsheet, adding their email and
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
-    player_details.append(name, email)
-    USER_SHEET.append_row(player_details)
+    user_details.append(name)
+    user_details.append(email)
+    USER_SHEET.append_row(user_details)
 
 def player_login():
     """
@@ -128,6 +129,6 @@ def player_login():
     print(f'Welcome,\n: {name}\n')
 
     input('\nEnter any key to continue:\n')
-    register_player()
+    register_user()
 
 check_user()
