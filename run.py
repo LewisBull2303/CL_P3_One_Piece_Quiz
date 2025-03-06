@@ -74,7 +74,13 @@ def quiz_start():
         else:
             print("\nWrong Answer!")
 
-
+def questions_answer():
+    """
+    This function will get the question and check the answer for them
+    """
+    def __init__(self, cue, answer):
+        self.cue = cue
+        self.answer = answer
 
 questions_call = [
     "What is the name of the main protagonist in One Piece?\n \
