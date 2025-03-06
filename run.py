@@ -73,6 +73,10 @@ def quiz_start():
             print("\nCorrect!\n")
         else:
             print("\nWrong Answer!")
+            leaderboard()
+
+def leaderboard():
+    
 
 def questions_answer():
     """

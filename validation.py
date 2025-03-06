@@ -131,4 +131,19 @@ def player_login():
     input('\nEnter any key to continue:\n')
     register_user()
 
+def total_scores():
+    """
+    this function will calculate the total score of all players 
+    """
+    score_column = SCOREBOARD.col_values(2)
+    total_score = 0
+
+    del score_column[0]
+    score_column = list(map(int, score_column))
+
+    for i in score_column:
+        total_score += i
+
+    return total_score
+
 check_user()
