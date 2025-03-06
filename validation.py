@@ -17,23 +17,23 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
 SCOREBOARD = SHEET.worksheet('scores')
-PLAYER_SHEET = SHEET.worksheet('players')
+USER_SHEET = SHEET.worksheet('players')
 
 name = ''
 email = ''
 player_details = []
 
-def check_player() -> str:
+def check_user() -> str:
     """
     Checks if player has played previously,
     Calls on get email function to validate the email
     """
-    print('Is this your first visit?\n')
+    print('Is this your First time here?\n')
     reply = '1) Yes \n2) No\n'
     response = input(reply).lower()
 
     while response not in ('1', 'y', '2', 'n'):
-        print('Please choose an option:')
+        print('Please choose one of the below option:\n')
         response = input(reply).lower()
 
     if response == '1' or response == 'y':
@@ -47,6 +47,8 @@ def check_player() -> str:
     elif response == '2' or response == 'n':
         print('You answered no\n')
         get_email()
+        validate_user_email()
+        get_user_name()
         return False
 
 def get_email():
@@ -73,7 +75,7 @@ def validate_user_email(email: str):
         get_email()
         return False
 
-def get_player_name():
+def get_user_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
     their name to say hello to them
@@ -81,8 +83,8 @@ def get_player_name():
     global name
     global player_name
     try:
-        player_email_row = PLAYER_SHEET.find(email).row
-        player_name = PLAYER_SHEET.row_values(player_email_row)[0]
+        player_email_row = USER_SHEET.find(email).row
+        player_name = USER_SHEET.row_values(player_email_row)[0]
         print(f'Welcome,\n: {player_name}\n')
         input('\nEnter any key to continue:\n')
 
@@ -91,6 +93,7 @@ def get_player_name():
 
     except AttributeError:
         print('\nEmail was not found in past player records, adding now')
+        player_login()
 
 def register_player():
     """
@@ -99,7 +102,7 @@ def register_player():
     same details again if they play more than once
     """
     player_details.append(name, email)
-    PLAYER_SHEET.append_row(player_details)
+    USER_SHEET.append_row(player_details)
 
 def player_login():
     """
@@ -108,7 +111,7 @@ def player_login():
     login again in the future.
     """
     global name
-    name = input('\nWhat is your name?\n')
+    name = input('\nWhat is your name?:\n')
 
     try:
         if len(name) < 3 or len(name) > 12:
@@ -127,4 +130,4 @@ def player_login():
     input('\nEnter any key to continue:\n')
     register_player()
 
-check_player()
+check_user()
