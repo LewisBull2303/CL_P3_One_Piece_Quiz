@@ -54,4 +54,4 @@ def retrieve_player_name():
         return player_name, True
 
     except AttributeError:
-        print('\nEmail wqs not found in past player records, adding now')
+        print('\nEmail was not found in past player records, adding now')
