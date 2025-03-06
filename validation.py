@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+
 from email_validator import validate_email, EmailNotValidError
 
 #  Scope and constant variables for google api and sheets
@@ -14,7 +15,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('scoreboard')
+SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
 SCOREBOARD = SHEET.worksheet('scores')
 PLAYER_SHEET = SHEET.worksheet('players')
 
@@ -117,3 +118,5 @@ def player_login():
 
     input('\nEnter any key to continue:\n')
     register_player()
+
+check_player()
