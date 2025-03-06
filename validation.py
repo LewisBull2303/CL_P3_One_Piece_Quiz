@@ -33,7 +33,7 @@ def check_user() -> str:
     response = input(reply).lower()
 
     while response not in ('1', 'y', '2', 'n'):
-        print('Please choose one of the below option:\n')
+        print('\nPlease choose one of the below option:\n')
         response = input(reply).lower()
 
     if response == '1' or response == 'y':
@@ -126,7 +126,7 @@ def player_login():
         player_login()
         return False
 
-    print(f'Welcome,\n: {name}\n')
+    print(f'Welcome {name}\n')
 
     input('\nEnter any key to continue:\n')
     register_user()
