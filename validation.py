@@ -18,6 +18,7 @@ SHEET = GSPREAD_CLIENT.open('scoreboard')
 SCOREBOARD = SHEET.worksheet('scores')
 PLAYER_SHEET = SHEET.worksheet('players')
 
+name = ''
 email = ''
 
 def get_emails():
@@ -35,3 +36,22 @@ def get_emails():
         print("Sorry this email is not valid, Please Try again!\n")
         get_emails()
         return False
+
+def retrieve_player_name():
+    """
+    This function will scan my spreadsheet for the players email and retrieve
+    their name to say hello to them
+    """
+    global name
+    global player_name
+    try:
+        player_email_row = PLAYER_SHEET.find(email).row
+        player_name = PLAYER_SHEET.row_values(player_email_row)[0]
+        print(f'Welcome,\n: {player_name}\n')
+        input('\nEnter any key to continue:\n')
+
+        name = player_name
+        return player_name, True
+
+    except AttributeError:
+        print('\nEmail wqs not found in past player records, adding now')
