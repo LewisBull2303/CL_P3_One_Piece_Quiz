@@ -3,6 +3,7 @@ from google.oauth2.service_account import Credentials
 import validation as val
 import os
 import random
+from tabulate import tabulate
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -101,16 +102,52 @@ def instructions():
     This function will explain to the player how the game will work and how they can win
     """
     print("""
-    The quiz will ask you 10 random questions from a possible pool of 30
-    You then have to chose an answer 1, 2 or 3. All questions are multiple choice
-    The questions will be themed around the anime One Piece
-    Some questions will be easier to answer and other more difficult
-    At the end you will have the option to post your score onto the scoreboard to see how you did against
+    The quiz will ask you 10 random questions from a possible pool of 30\n
+    You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
+    The questions will be themed around the anime One Piece\n
+    Some questions will be easier to answer and other more difficult\n
+    At the end you will have the option to post your score onto the scoreboard to see how you did against\n
     the other players
     """)
     input("Enter any key to return to the home page")
     clear_screen()
     
+def main_menu():
+    """
+    This function will be the main menu for the player
+    When they are done with the quiz they will be re-directed here and when they 
+    want to quit they can do so from here
+    """
+    print("Please choose an option from below:\n")
+    menu_options = "1) Play\n2) Scoreboard\n3) How to play\n4) Quit"
+    selected_option = input(menu_options)
+    
+    while selected_option not in ("1", "2", "3", "4"):
+        print("Please select an option either 1, 2, 3 or 4")
+        selected_option = input(menu_options)
+    
+    if selected_option == "1":
+        clear_screen()
+        ascii_logo()
+        quiz_start(questions)
+    
+    elif selected_option == "2":
+        clear_screen()
+        ascii_logo()
+        print("Scoreboard")
+        print(tabulate(scoreboard_data))
+        input("Press any key to return:\n")
+        clear_screen()
+        main_menu()
+    
+    elif selected_option == "3":
+        clear_screen()
+        instructions()
+    
+    elif selected_option == "4":
+        clear_screen()
+        print("Thanks for playing!")
+        exit()
 
 def leaderboard():
     print()
