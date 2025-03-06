@@ -52,4 +52,4 @@ def clear_screen():
     This will clear the terminal so all of the information
     on the terminal
     """
-
+    os.system("cls" if os.name == "nt" else "clear")
