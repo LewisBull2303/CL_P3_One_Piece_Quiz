@@ -53,3 +53,157 @@ def clear_screen():
     on the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
+
+
+
+questions_call = [
+    "What is the name of the main protagonist in One Piece?\n \
+     1) Luffy\n \
+     2) Zoro\n \
+     3) Kaido\n ",
+
+    "Where was Gol D. Roger born?\n \
+     1) East Blue\n \
+     2) West Blue\n \
+     3) South Blue\n ",
+
+    "What is the name of the village Luffy was born in?\n \
+     1) Cocoyasi Village\n \
+     2) Shimotsuki Village\n \
+     3) Foosha Village\n ",
+
+    "What Devil Fruit did Luffy Eat?\n \
+     1) Mera Mera Fruit\n \
+     2) Gum Gum Fruit\n \
+     3) Yami Yami Fruit\n ",
+
+    "What One Piece' character is a skilled swordsman who always carries three katanas with him?\n \
+     1) Brook\n \
+     2) Zoro\n \
+     3) Sanji\n ",
+
+    "What is the name of the strongest swordsman?\n \
+     1) King\n \
+     2) Marco\n \
+     3) Mihawk\n ",
+
+    "During What arc did Robin officially join the strawhats?\n \
+     1) Enis Lobby\n \
+     2) Water 7\n \
+     3) Marineford\n ",
+
+    "Who ate the Ice Ice Fruit?\n \
+     1) Aokiji\n \
+     2) Kizaru\n \
+     3) Sengoku\n ",
+
+    "What is the name of the warden at Impel Down?\n \
+     1) Buggy\n \
+     2) Shiryu\n \
+     3) Magellan\n ",
+
+    "What is the name of the dragon that helped the straw hats climb to Zou?\n \
+     1) Nekozaemon\n \
+     2) Ryunosuke\n \
+     3) Kuro\n ",
+
+    "Which of the below characters is an Admiral\n \
+     1) Garp\n \
+     2) Kuzan\n \
+     3) Sengoku\n ",
+
+    "What is the name of the strawhats first ship?\n \
+     1) Going Merry\n \
+     2) Thousand Sunny\n \
+     3) Tsunami\n ",
+
+    "What is the first Island that the straw hats visit after the time skip?\n \
+     1) Dressrosa\n \
+     2) Punk Hazard\n \
+     3) Fish-man Island\n ",
+
+    "What is the name of the drug Caesar created in the form of a candy?\n \
+     1) SMILE\n \
+     2) FUN\n \
+     3) JOY\n ",
+
+    "What is the name of the Doctor who looked after Chopper?\n \
+     1) Dr Hirilk\n \
+     2) Dr Crocus\n \
+     3) Dr Law\n ",
+
+    "What is the name of the mad scientist in the egghead island arc?\n \
+     1) Dr Kuma\n \
+     2) Dr Egghead\n \
+     3) Dr Vegapunk\n ",
+
+    "What is the name of the kingdown which is erased in chapter 1060?\n \
+     1) Lulusia Kingdom\n \
+     2) Kuraigana Kingdom\n \
+     3) Kiseki Kingdom\n ",
+
+    "What is the name of the island where the Revolutionary Army's base is located?\n \
+    1) Baltigo\n \
+    2) Kuraigana Island\n \
+    3) Ruskaina Island\n "
+
+    "What is the Military rank is Kong?\n \
+     1) Vice-Admiral\n \
+     2) Admiral\n \
+     3) Commander-in-Chief\n ",
+
+    "What is the first name that Nico Robin is introduced as?\n \
+     1) Miss All Sunday\n \
+     2) Miss Wednesday\n \
+     3) Miss Friday\n ",
+
+    "Who is the only person to ever harm Luffys Straw Hat?\n \
+     1) Akainu\n \
+     2) Garp\n \
+     3) Buggy\n ",
+
+    "Who gave shanks his scar on his eye?\n \
+     1) Whitebeard\n \
+     2) Blackbeard\n \
+     3) Gol. D. Roger\n ",
+
+    "When Mr. 2 was on the Going Merry who did he not touch?\n \
+     1) Chopper\n \
+     2) Sanji\n \
+     3) Zoro\n ",
+
+    "How many agents of Baroque works do we see?\n \
+     1) 9\n \
+     2) 11\n \
+     3) 13\n ",
+
+    "What is the name of the leader of CP9\n \
+     1) Rob Lucci\n \
+     2) Blueno\n \
+     3) Spandam\n ",
+
+    "Which of the following pirates is NOT part of the worst generation?\n \
+     1) Blackbeard\n \
+     2) X Drake\n \
+     3) Doflamingo\n ",
+
+    "Who sent all of the strawhats to different islands in the sabaody archipelago arc?\n \
+     1) Kuma\n \
+     2) Shanks\n \
+     3) Silvers Rayleigh\n ",
+
+    "Who Stowed away in a barrel after Wano on the Thousand Sunny?\n \
+     1) Kin'mon\n \
+     2) Raizo\n \
+     3) Caribou\n ",
+
+    "What game is Fijitora playing when he is introduced?\n \
+     1) Poker\n \
+     2) Dice\n \
+     3) Roulette\n ",
+
+    "Who was able to communicate with Zunesha?\n \
+     1) Gol D. Roger\n \
+     2) Luffy\n \
+     3) Momonosuke\n ",
+]
