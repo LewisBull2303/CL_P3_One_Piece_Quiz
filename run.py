@@ -4,6 +4,7 @@ import validation as val
 import os
 import random
 from tabulate import tabulate
+from datetime import datetime
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -19,6 +20,9 @@ SCOREBOARD = SHEET.worksheet('scores')
 PLAYER_SHEET = SHEET.worksheet('players')
 
 score = 0
+player_score = []
+today = datetime.now()
+date = today.strftime("%d,%m,%y")
 
 scoreboard_data = SCOREBOARD.get_all_values()
 
@@ -152,7 +156,21 @@ def main_menu():
 def leaderboard():
     print()
 
+def update_leaderboard():
+    """
+    This function will be called to add the players score 
+    to the leaderboard and add their stats in too
+    """
+    print("\nUpdating the leaderboard...\n")
+    player_score.append(val.name)
+    player_score.append(score)
+    player_score.append(date)
+    SCOREBOARD.append_row(player_score)
+    print("\nScoreboard has now been updated!")
 
+    input("Please press any key to return to the main menu: \n")
+    clear_screen()
+    main_menu()
 
 def questions_answer():
     """
@@ -346,3 +364,9 @@ questions = [
     questions_answer(questions_call[28], "3"),
     questions_answer(questions_call[29], "3")
 ]
+
+val.check_user()
+clear_screen()
+score = 0
+ascii_logo()
+main_menu()
