@@ -55,7 +55,15 @@ def get_email():
     """
     global email
     email = input("What is your email address?:\n")
+    validate_user_email(email)
+    return email, True
 
+def validate_user_email(email: str):
+    """
+    This functions validates the users email to be able to have a chain
+    of functions when registering the user
+    The emails must be in the format -> something@somthing.com
+    """
     try:
         validate_email(email)
         return True
