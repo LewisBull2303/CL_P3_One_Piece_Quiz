@@ -96,6 +96,22 @@ def get_player_stats():
     else:
         print(f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!")
 
+def instructions():
+    """
+    This function will explain to the player how the game will work and how they can win
+    """
+    print("""
+    The quiz will ask you 10 random questions from a possible pool of 30
+    You then have to chose an answer 1, 2 or 3. All questions are multiple choice
+    The questions will be themed around the anime One Piece
+    Some questions will be easier to answer and other more difficult
+    At the end you will have the option to post your score onto the scoreboard to see how you did against
+    the other players
+    """)
+    input("Enter any key to return to the home page")
+    clear_screen()
+    
+
 def leaderboard():
     print()
 
