@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import validation as val
 import os
+import random
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -15,6 +16,8 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('leader_board')
 SCOREBOARD = SHEET.worksheet('scores')
 PLAYER_SHEET = SHEET.worksheet('players')
+
+score = 0
 
 scoreboard_data = SCOREBOARD.get_all_values()
 
@@ -53,6 +56,13 @@ def clear_screen():
     on the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
+
+def quiz_start():
+    """
+    This function will start the quiz and start the main game loop
+    """
+    questions_list = random.sample(questions)
+    global score
 
 
 
@@ -206,4 +216,8 @@ questions_call = [
      1) Gol D. Roger\n \
      2) Luffy\n \
      3) Momonosuke\n ",
+]
+
+questions = [
+
 ]
