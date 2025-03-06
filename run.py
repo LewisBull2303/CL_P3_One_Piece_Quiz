@@ -75,8 +75,31 @@ def quiz_start():
             print("\nWrong Answer!")
             leaderboard()
 
+def get_player_stats():
+    """
+    This function will gather the players stats and put them in a dictionary
+    for the end of the game so it can be displayed along with the players
+    score
+    """
+    player_stats = {
+        "Name": val.name,
+        "Score": str(score),
+        "Email": val.email
+    }
+
+    print(f"Name {player_stats['Name']}")
+    print(f"Score: {player_stats["Score"]}")
+    print(f"Email: {player_stats['Email']}")
+
+    if score >= 50:
+        print(f"Congratulations {player_stats['Name']} you scored {player_stats["Score"]} you are a true one piece fan!")
+    else:
+        print(f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!")
+
 def leaderboard():
-    
+    print()
+
+
 
 def questions_answer():
     """
