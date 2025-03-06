@@ -20,6 +20,7 @@ PLAYER_SHEET = SHEET.worksheet('players')
 
 name = ''
 email = ''
+player_details = []
 
 def get_emails():
     """
@@ -37,7 +38,7 @@ def get_emails():
         get_emails()
         return False
 
-def retrieve_player_name():
+def get_player_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
     their name to say hello to them
@@ -55,3 +56,12 @@ def retrieve_player_name():
 
     except AttributeError:
         print('\nEmail was not found in past player records, adding now')
+
+def register_player():
+    """
+    This function will add the new players to the spreadsheet, adding their email and
+    name in order for them to be saved. This was the player can login again under the
+    same details again if they play more than once
+    """
+    player_details.append(name, email)
+    PLAYER_SHEET.append_row(player_details)
