@@ -93,11 +93,11 @@ def get_player_stats():
     }
 
     print(f"Name {player_stats['Name']}")
-    print(f"Score: {player_stats["Score"]}")
+    print(f"Score: {player_stats['Score']}")
     print(f"Email: {player_stats['Email']}")
 
     if score >= 50:
-        print(f"Congratulations {player_stats['Name']} you scored {player_stats["Score"]} you are a true one piece fan!")
+        print(f"Congratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!")
     else:
         print(f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!")
 
