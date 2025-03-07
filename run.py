@@ -66,7 +66,7 @@ def quiz_start(questions):
     """
     This function will start the quiz and start the main game loop
     """
-    questions_list = random.sample(questions)
+    questions_list = random.sample(questions, 15)
     global score
     score = 0
     for question in questions_list:
@@ -106,7 +106,7 @@ def instructions():
     This function will explain to the player how the game will work and how they can win
     """
     print("""
-    The quiz will ask you 10 random questions from a possible pool of 30\n
+    The quiz will ask you 15 random questions from a possible pool of 30\n
     You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
     The questions will be themed around the anime One Piece\n
     Some questions will be easier to answer and other more difficult\n
@@ -385,5 +385,6 @@ questions = [
 
 
 score = 0
+clear_screen()
 ascii_logo()
 main_menu()

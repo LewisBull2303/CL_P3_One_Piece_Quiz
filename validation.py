@@ -54,7 +54,7 @@ def get_email() -> str:
     """
     global email
     while True:
-        email = input("\nWhat is your email address?\n")
+        email = input("\nWhat is your email address?\n").lower()
         clear_screen()
         print_loading()
         time.sleep(2)
@@ -122,6 +122,8 @@ def create_new_user() -> list:
 
         if user_email not in email_column:
             print("Thank you!")
+            print(f"\n Welcome {name}")
+            time.sleep(1)
             print_loading()
             time.sleep(2)
             clear_screen()
