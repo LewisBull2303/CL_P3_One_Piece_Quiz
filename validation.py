@@ -29,8 +29,10 @@ def start_game():
     """
     This function will check if the user has played the game before
     """
-    print("Have you played before?")
-    question = "1) Yes\n2) No"
+    global user_details
+    user_details = []
+    print("Have you played before?\n")
+    question = "1) Yes\n2) No\n"
     answer = input(question)
 
     if answer == "1" or answer == "y":
@@ -40,16 +42,17 @@ def start_game():
     
     return answer
 
-def get_email():
+def get_email() -> str:
     """
     This function will just get the users email
     """
+    global email
     while True:
-        email = input(f"{name} - what's your email address?\n").strip()
+        email = input("What is your email address?\n")
 
         if validate_user_email(email):
             break
-    
+
     return email
 
 def validate_user_email(email: str):
@@ -84,15 +87,19 @@ def register_user():
     """
     print("Creating a new user...")
     print_loading()
-    new_user = create_new_user()
-    update_user_worksheet(new_user)
+    create_new_user()
     
-def create_new_user():
+    update_user_worksheet()
+    
+def create_new_user() -> list:
     """
     Creates the new user
     Gets the players name and email
     Checks if the information is already in the database
     """
+    global email
+    global name
+    global user_details
     email_column = USER_SHEET.col_values(1)
 
     while True:
@@ -105,6 +112,8 @@ def create_new_user():
 
         if user_email not in email_column:
             print("Thank you!")
+            user_details.append(email)
+            print(user_details)
             break
 
         else:
@@ -112,8 +121,8 @@ def create_new_user():
             print("Please try another email")
     return [name, email]
 
-def update_user_worksheet(data: list):
-    USER_SHEET.append_row(data)
+def update_user_worksheet():
+    USER_SHEET.append_row(user_details)
 
 def player_login():
     """

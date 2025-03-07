@@ -62,7 +62,7 @@ def clear_screen():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
-def quiz_start():
+def quiz_start(questions):
     """
     This function will start the quiz and start the main game loop
     """
@@ -131,6 +131,8 @@ def main_menu():
         selected_option = input(menu_options)
     
     if selected_option == "1":
+        clear_screen()
+        val.start_game()
         clear_screen()
         ascii_logo()
         quiz_start(questions)
@@ -381,9 +383,7 @@ questions = [
     questions_answer(questions_call[29], "3")
 ]
 
-clear_screen()
-val.check_user()
-clear_screen()
+
 score = 0
 ascii_logo()
 main_menu()
