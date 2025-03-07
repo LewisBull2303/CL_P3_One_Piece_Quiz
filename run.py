@@ -188,7 +188,7 @@ def update_leaderboard():
     clear_screen()
     main_menu()
 
-def questions_answer():
+class questions_answer():
     """
     This function will get the question and check the answer for them
     """
