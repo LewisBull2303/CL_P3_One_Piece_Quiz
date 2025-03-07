@@ -39,7 +39,7 @@ def check_user() -> str:
 
     if response == '1' or response == 'y':
         print('You answered yes\n')
-        register_user
+        register_user()
         return True
 
     elif response == '2' or response == 'n':
@@ -52,7 +52,7 @@ def get_email():
     This function will get the players email to store in the players spreadsheet
     """
     global email
-    email = input("What is your email address?:\n")
+    email = input("What is your email address?:\n").lower()
     validate_user_email(email)
     return email, True
 
@@ -93,10 +93,8 @@ def get_user_name():
     their name to say hello to them
     """
     global name
-    global player_name
     name = input("\nWhat is your name?: \n")
-    name = player_name
-    return player_name, True
+    return name, True
 
 def register_user():
     """
@@ -120,12 +118,16 @@ def player_login():
     global password
     global email
     while True:
-        user_email = get_email(email)
+        get_email()
+        user_email = email
+        print("User email is " + user_email)
         existing_email = check_emails(user_email)
 
         if existing_email:
             player_email_row = USER_SHEET.find(user_email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
+
+            password = USER_SHEET.row_values(player_email_row)[2]
 
             password_check = input("Exisitng email was found, Please enter your password: \n")
             while True:
@@ -133,8 +135,9 @@ def player_login():
                     print("Welcome back " + player_name)
                     break
                 else:
+                    print(password)
                     print("Incorrect password, please try again or type q to go back\n")
-                    password_check
+                    password_check = input("Please enter your password: \n")
                     if password_check.lower() == "q":
                         check_user()
                         break
@@ -159,7 +162,7 @@ def total_scores():
 
     return total_score
 
-def check_emails():
+def check_emails(email : str) -> bool:
     """
     This function will check if the user has previously logged in and
     didnt remember, it will loop through all of the emails and check if the email has
