@@ -127,7 +127,7 @@ def create_new_user() -> list:
             print_loading()
             time.sleep(2)
             clear_screen()
-            user_details.append(email)
+            user_details.append(email.lower())
             break
 
         else:
@@ -151,7 +151,7 @@ def create_new_user() -> list:
                 time.sleep(2)
                 player_login()
                 break
-    return [name, email]
+    return [name, email.lower()]
 
 def update_user_worksheet():
     USER_SHEET.append_row(user_details)
@@ -168,14 +168,14 @@ def player_login():
         if email == "":
             user_email = get_email()
         else:
-            user_email = email
-        existing_email = check_emails(user_email)
+            user_email = email.lower()
+        existing_email = check_emails(user_email.lower())
 
         if existing_email:
             player_email_row = USER_SHEET.find(user_email).row
-            player_name = USER_SHEET.row_values(player_email_row)[0]
+            name = USER_SHEET.row_values(player_email_row)[0]
             clear_screen()
-            print("Welcome back", player_name + "!")
+            print("Welcome back", name + "!")
             time.sleep(2)
             print_loading()
             time.sleep(3)
@@ -188,7 +188,7 @@ def player_login():
 def input_correct_email():
     """
     Asks players to input their email
-    again if the email was not found in the datebase
+    again if the email was not found in the database
     """
     print("Sorry this email is not registered\n")
     email_option = email_not_registered()

@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import validation as val
 import os
+import time
 import random
 from tabulate import tabulate
 from datetime import datetime
@@ -77,8 +78,8 @@ def quiz_start(questions):
             score += 1
             print("\nCorrect!\n")
         else:
-            print("\nWrong Answer!")
-            leaderboard()
+            print("\nWrong Answer!\n")
+    leaderboard()
 
 def get_player_stats():
     """
@@ -106,12 +107,12 @@ def instructions():
     This function will explain to the player how the game will work and how they can win
     """
     print("""
-    The quiz will ask you 15 random questions from a possible pool of 30\n
-    You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
-    The questions will be themed around the anime One Piece\n
-    Some questions will be easier to answer and other more difficult\n
-    At the end you will have the option to post your score onto the scoreboard to see how you did against\n
-    the other players
+The quiz will ask you 15 random questions from a possible pool of 30\n
+You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
+The questions will be themed around the anime One Piece\n
+Some questions will be easier to answer and other more difficult\n
+At the end you will have the option to post your score onto the scoreboard to see how you did against
+the other players
     """)
     input("Enter any key to return to the home page")
     clear_screen()
@@ -156,23 +157,26 @@ def main_menu():
         exit()
 
 def leaderboard():
-    print(get_player_stats)
+    print(f"Good Job {val.name} your score was {score}\n")
     add_score = input("Would you like to add your score to the scoreboard? Y or N\n").lower()
 
-    if add_score == "y":
-        clear_screen()
-        update_leaderboard()
-        return True
-    
-    elif add_score == "n":
-        print("Okay... returning to the main menu...")
-        clear_screen()
-        main_menu()
-        return False
-    
-    else:
-        print("Please choose a correct option Y or N")
-        leaderboard()
+    while True:
+        if add_score == "y":
+            clear_screen()
+            update_leaderboard()
+            break
+        
+        elif add_score == "n":
+            print("Okay... returning to the main menu...")
+            time.sleep(2)
+            print_loading()
+            clear_screen()
+            main_menu()
+            break
+        else:
+            print("Please choose a correct option Y or N")
+            continue
+        
 
 def update_leaderboard():
     """
@@ -197,6 +201,11 @@ class questions_answer():
     def __init__(self, cue, answer):
         self.cue = cue
         self.answer = answer
+
+def print_loading():
+    print("=" * 30)
+    print("\nLoading...\n")
+    print("=" * 30)
 
 questions_call = [
     "What is the name of the main protagonist in One Piece?\n \
