@@ -48,8 +48,11 @@ def get_email() -> str:
     """
     global email
     while True:
-        email = input("What is your email address?\n")
-
+        email = input("\nWhat is your email address?\n")
+        clear_screen()
+        print_loading()
+        time.sleep(2)
+        clear_screen()
         if validate_user_email(email):
             break
 
@@ -85,11 +88,11 @@ def register_user():
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
-    print("Creating a new user...")
+    print("\nCreating a new user...")
     print_loading()
     create_new_user()
-    
-    update_user_worksheet()
+    if email not in USER_SHEET.col_values(2):
+        update_user_worksheet()
     
 def create_new_user() -> list:
     """
@@ -104,8 +107,9 @@ def create_new_user() -> list:
     print(email_column)
 
     while True:
-        name = input("What is your name: \n")
+        name = input("\nWhat is your name: \n")
         user_details.append(name)
+        time.sleep(2)
         break
 
     while True:
@@ -113,12 +117,33 @@ def create_new_user() -> list:
 
         if user_email not in email_column:
             print("Thank you!")
+            print_loading()
+            time.sleep(2)
+            clear_screen()
             user_details.append(email)
             break
 
         else:
-            print(f"Sorry {name}, this email is already used.")
-            print("Please try another email")
+            print(f"Sorry {name}, this email is already used.\n")
+            print("Would you like to: \n")
+            options = f"1) Try another email\n2) Login with this email {email}\n"
+            answer = input(options)
+
+            while answer not in ("1", "2"):
+                print("Please Choose between one or two")
+                answer = input(options)
+            
+            if answer == "1":
+                clear_screen()
+                print_loading()
+                time.sleep(2)
+                continue
+            elif answer == "2":
+                clear_screen()
+                print_loading()
+                time.sleep(2)
+                player_login()
+                break
     return [name, email]
 
 def update_user_worksheet():
@@ -130,17 +155,24 @@ def player_login():
     register them to the spreadsheet, this wat when they can
     login again in the future.
     """
-    global password
+    global name
     global email
     while True:
-        user_email = email
+        if email == "":
+            user_email = get_email()
+        else:
+            user_email = email
         existing_email = check_emails(user_email)
 
         if existing_email:
             player_email_row = USER_SHEET.find(user_email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
-
-            print("Welcome", player_name + "!")
+            clear_screen()
+            print("Welcome back", player_name + "!")
+            time.sleep(2)
+            print_loading()
+            time.sleep(3)
+            clear_screen()
             break
         else:
             input_correct_email()
@@ -157,6 +189,8 @@ def input_correct_email():
     if email_option == "1":
         print("Please write your email again:")
     elif email_option == "2":
+        print_loading()
+        time.sleep(2)
         register_user()
 
 def email_not_registered() -> str:
@@ -209,6 +243,6 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 def print_loading():
-    print("=======================================")
+    print("=" * 30)
     print("\nLoading...\n")
-    print("=======================================")
+    print("=" * 30)
