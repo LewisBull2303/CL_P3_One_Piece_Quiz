@@ -91,7 +91,6 @@ def get_password():
         get_password()
         return False
                 
-
 def get_user_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
@@ -128,6 +127,8 @@ def player_login():
     register them to the spreadsheet, this wat when they can
     login again in the future.
     """
+    global password
+    global email
     while True:
         user_email = get_email(email)
         existing_email = check_emails(user_email)
@@ -136,7 +137,23 @@ def player_login():
             player_email_row = USER_SHEET.find(email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
 
-            print("Welcom Back " + player_name "Please enter your password: ")
+            password_check = input("Exisitng email was found, Please enter your password: \n")
+            while True:
+                if password_check == password:
+                    print("Welcome back " + player_name)
+                    break
+                else:
+                    print("Incorrect password, please try again or type q to go back\n")
+                    password_check
+                    if password_check.lower() == "q":
+                        check_user()
+                        break
+                    else:
+                        continue
+        else:
+            print("Email not found in the database, Please register an account: ")
+            register_user()
+
 def total_scores():
     """
     this function will calculate the total score of all players 
