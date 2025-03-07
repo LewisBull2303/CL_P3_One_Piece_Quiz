@@ -381,6 +381,7 @@ questions = [
     questions_answer(questions_call[29], "3")
 ]
 
+clear_screen()
 val.check_user()
 clear_screen()
 score = 0

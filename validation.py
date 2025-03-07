@@ -31,6 +31,8 @@ def check_user() -> str:
     Checks if player has played previously,
     Calls on get email function to validate the email
     """
+    global email
+    email = ''
     print('Is this your First time here?\n')
     reply = '1) Yes \n2) No\n'
     response = input(reply).lower()
@@ -40,12 +42,12 @@ def check_user() -> str:
         response = input(reply).lower()
 
     if response == '1' or response == 'y':
-        print('You answered yes\n')
+        print('\nYou answered yes')
         register_user()
         return True
 
     elif response == '2' or response == 'n':
-        print('You answered no\n')
+        print('\nYou answered no')
         player_login()
         return False
 
@@ -56,6 +58,28 @@ def get_email():
     global email
     email = input("\nWhat is your email address?:\n").lower()
     validate_user_email(email)
+    user_email = email
+    existing_email = check_emails(user_email)
+    if existing_email:
+        found_email = ("\nEmail is already registered! Would you like to use a different email or Login under this email?: \n1) Login with this email: " + user_email + " \n2) Register with a different email \n")
+        choice = input(found_email).lower()
+
+        while choice not in ("1", "2"):
+            print("Please select a valid option from below:\n")
+            choice = input(found_email).lower
+
+        if choice == "1":
+            time.sleep(2)
+        elif choice == "2":
+            print("=======================================")
+            print("\nSending you to the register page...\n")
+            print("=======================================")
+            time.sleep(2)
+            register_user()
+    else:
+        print_loading()
+
+
     return email, True
 
 def validate_user_email(email: str):
@@ -76,7 +100,7 @@ def validate_user_email(email: str):
 def get_password():
     global password
 
-    password_prompt = ("Please enter a password: ")
+    password_prompt = ("\nPlease enter a password: \n")
     password = input(password_prompt)
 
     try:
@@ -85,7 +109,7 @@ def get_password():
                 Password needs to be at least 8 Characters long"
             """)
     except ValueError as e:
-        print("Invalid Password length, Please try again.")
+        print("Password needs to be at least 8 Characters long")
         get_password()
         return False
                 
@@ -107,15 +131,25 @@ def register_user():
     print("=======================================")
     print("\nLoading...\n")
     print("=======================================")
-    time.sleep(1)
+    time.sleep(2)
     clear_screen()
     get_email()
     get_user_name()
     get_password()
+    print("\nAdding your details to the database...")
+    print("=======================================")
+    time.sleep(2)
+    print("\nDetails Added!\n")
+    print("=======================================")
     user_details.append(name)
     user_details.append(email)
     user_details.append(password)
     USER_SHEET.append_row(user_details)
+    clear_screen()
+    print("=======================================")
+    print("\nLoading the quiz...\n")
+    print("=======================================")
+    time.sleep(2)
 
 def player_login():
     """
@@ -125,8 +159,8 @@ def player_login():
     """
     global password
     global email
+    get_email()
     while True:
-        get_email()
         user_email = email
         existing_email = check_emails(user_email)
 
@@ -136,7 +170,7 @@ def player_login():
 
             password = USER_SHEET.row_values(player_email_row)[1]
 
-            password_check = input("\nExisitng email was found, Please enter your password: \n")
+            password_check = input("\nPlease enter your password: \n")
             while True:
                 if password_check == password:
                     print("Welcome back " + player_name)
@@ -152,6 +186,7 @@ def player_login():
                         continue
         else:
             print("\nEmail not found in the database, re-directing you to the registration page...")
+            time.sleep(2)
             clear_screen()
             register_user()
 
@@ -189,3 +224,8 @@ def clear_screen():
     on the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
+
+def print_loading():
+    print("=======================================")
+    print("\nLoading...\n")
+    print("=======================================")
