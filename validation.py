@@ -46,9 +46,7 @@ def check_user() -> str:
 
     elif response == '2' or response == 'n':
         print('You answered no\n')
-        get_email()
-        validate_user_email(email)
-        get_user_name()
+        register_user()
         return False
 
 def get_email():
@@ -117,6 +115,9 @@ def register_user():
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
+    get_email()
+    get_user_name()
+    get_password()
     user_details.append(name)
     user_details.append(email)
     USER_SHEET.append_row(user_details)
