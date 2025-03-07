@@ -1,5 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import os
+import time
 
 from email_validator import validate_email, EmailNotValidError
 
@@ -52,7 +54,7 @@ def get_email():
     This function will get the players email to store in the players spreadsheet
     """
     global email
-    email = input("What is your email address?:\n").lower()
+    email = input("\nWhat is your email address?:\n").lower()
     validate_user_email(email)
     return email, True
 
@@ -102,6 +104,11 @@ def register_user():
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
+    print("=======================================")
+    print("\nLoading...\n")
+    print("=======================================")
+    time.sleep(1)
+    clear_screen()
     get_email()
     get_user_name()
     get_password()
@@ -120,7 +127,6 @@ def player_login():
     while True:
         get_email()
         user_email = email
-        print("User email is " + user_email)
         existing_email = check_emails(user_email)
 
         if existing_email:
@@ -129,7 +135,7 @@ def player_login():
 
             password = USER_SHEET.row_values(player_email_row)[2]
 
-            password_check = input("Exisitng email was found, Please enter your password: \n")
+            password_check = input("\nExisitng email was found, Please enter your password: \n")
             while True:
                 if password_check == password:
                     print("Welcome back " + player_name)
@@ -144,7 +150,8 @@ def player_login():
                     else:
                         continue
         else:
-            print("Email not found in the database, Please register an account: ")
+            print("\nEmail not found in the database, re-directing you to the registration page...")
+            clear_screen()
             register_user()
 
 def total_scores():
@@ -181,4 +188,3 @@ def clear_screen():
     on the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
-check_user()
