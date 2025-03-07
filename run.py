@@ -285,7 +285,7 @@ questions_call = [
     "What is the name of the island where the Revolutionary Army's base is located?\n \
     1) Momoiro Island\n \
     2) Kuraigana Island\n \
-    3) Ruskaina Island\n "
+    3) Ruskaina Island\n ",
 
     "What is the Military rank is Kong?\n \
      1) Vice-Admiral\n \
