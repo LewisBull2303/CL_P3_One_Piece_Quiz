@@ -145,4 +145,18 @@ def total_scores():
 
     return total_score
 
+def check_emails():
+    """
+    This function will check if the user has previously logged in and
+    didnt remember, it will loop through all of the emails and check if the email has
+    already been registered
+    """
+    for emails in USER_SHEET.get_column(2):
+        if emails == email:
+           check = "You have already registered before! Would you like to continue with the current email or register a new one? Y or N\n"
+           answer = input(check).lower()
+
+           while answer not in ("y", "n"):
+               print("Please type a valid option below:\n")
+               answer = input(check).lower()
 check_user()
