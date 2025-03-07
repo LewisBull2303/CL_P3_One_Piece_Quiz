@@ -21,6 +21,7 @@ USER_SHEET = SHEET.worksheet('users')
 
 name = ''
 email = ''
+password = ''
 user_details = []
 
 def check_user() -> str:
@@ -74,6 +75,23 @@ def validate_user_email(email: str):
         get_email()
         return False
 
+def get_password():
+    global password
+
+    password_prompt = ("Please enter a password: ")
+    password = input(password_prompt)
+
+    try:
+        if len(password) < 7:
+            raise ValueError("""
+                Password needs to be at least 8 Characters long"
+            """)
+    except ValueError as e:
+        print("Invalid Password length, Please try again.")
+        get_password()
+        return False
+                
+
 def get_user_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
@@ -110,26 +128,15 @@ def player_login():
     register them to the spreadsheet, this wat when they can
     login again in the future.
     """
-    global name
-    name = input('What is your name?:\n')
+    while True:
+        user_email = get_email(email)
+        existing_email = check_emails(user_email)
 
-    try:
-        if len(name) < 3 or len(name) > 12:
-            raise ValueError(
-                """Name needs to be at least 3 characters
-                or maximum 12 characters"""
-            )
+        if existing_email:
+            player_email_row = USER_SHEET.find(email).row
+            player_name = USER_SHEET.row_values(player_email_row)[0]
 
-    except ValueError as e:
-        print(f'Invalid name length: {e},\nplease try again.\n')
-        player_login()
-        return False
-
-    print(f'Welcome {name}\n')
-
-    input('\nEnter any key to continue:\n')
-    register_user()
-
+            print("Welcom Back " + player_name "Please enter your password: ")
 def total_scores():
     """
     this function will calculate the total score of all players 
@@ -151,12 +158,11 @@ def check_emails():
     didnt remember, it will loop through all of the emails and check if the email has
     already been registered
     """
-    for emails in USER_SHEET.get_column(2):
-        if emails == email:
-           check = "You have already registered before! Would you like to continue with the current email or register a new one? Y or N\n"
-           answer = input(check).lower()
+    email_column = USER_SHEET.col_values(2)
 
-           while answer not in ("y", "n"):
-               print("Please type a valid option below:\n")
-               answer = input(check).lower()
+    if email in email_column:
+        return True
+    else:
+        return False
+
 check_user()
