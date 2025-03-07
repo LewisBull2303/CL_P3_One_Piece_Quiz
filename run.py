@@ -15,7 +15,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('leader_board')
+SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
 SCOREBOARD = SHEET.worksheet('scores')
 PLAYER_SHEET = SHEET.worksheet('players')
 

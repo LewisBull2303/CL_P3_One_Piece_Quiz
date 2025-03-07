@@ -84,8 +84,8 @@ def get_user_name():
     try:
         player_email_row = USER_SHEET.find(email).row
         player_name = USER_SHEET.row_values(player_email_row)[0]
-        print(f'Welcome,\n: {player_name}\n')
-        input('\nEnter any key to continue:\n')
+        print(f'\nWelcome,\n: {player_name}\n')
+        input('Enter any key to continue:\n')
 
         name = player_name
         return player_name, True
@@ -102,7 +102,6 @@ def register_user():
     """
     user_details.append(name)
     user_details.append(email)
-    print(user_details)
     USER_SHEET.append_row(user_details)
 
 def player_login():
@@ -112,7 +111,7 @@ def player_login():
     login again in the future.
     """
     global name
-    name = input('\nWhat is your name?:\n')
+    name = input('What is your name?:\n')
 
     try:
         if len(name) < 3 or len(name) > 12:
