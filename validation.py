@@ -84,7 +84,7 @@ def get_user_name():
     try:
         player_email_row = USER_SHEET.find(email).row
         player_name = USER_SHEET.row_values(player_email_row)[0]
-        print(f'\nWelcome,\n: {player_name}\n')
+        print('\nWelcome,: ' + player_name + "\n")
         input('Enter any key to continue:\n')
 
         name = player_name
