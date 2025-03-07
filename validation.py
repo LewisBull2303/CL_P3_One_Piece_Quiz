@@ -135,7 +135,7 @@ def player_login():
         existing_email = check_emails(user_email)
 
         if existing_email:
-            player_email_row = USER_SHEET.find(email).row
+            player_email_row = USER_SHEET.find(user_email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
 
             password_check = input("Exisitng email was found, Please enter your password: \n")
