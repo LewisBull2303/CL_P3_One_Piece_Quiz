@@ -23,7 +23,7 @@ PLAYER_SHEET = SHEET.worksheet('users')
 score = 0
 player_score = []
 today = datetime.now()
-date = today.strftime("%d,%m,%y")
+date = today.strftime("%d/%m/%y")
 
 scoreboard_data = SCOREBOARD.get_all_values()
 
@@ -192,6 +192,7 @@ def update_leaderboard():
 
     input("Please press any key to return to the main menu: \n")
     clear_screen()
+    ascii_logo()
     main_menu()
 
 class questions_answer():
