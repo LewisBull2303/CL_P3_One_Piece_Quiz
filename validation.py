@@ -114,6 +114,7 @@ def register_user():
     get_password()
     user_details.append(name)
     user_details.append(email)
+    user_details.append(password)
     USER_SHEET.append_row(user_details)
 
 def player_login():
@@ -133,7 +134,7 @@ def player_login():
             player_email_row = USER_SHEET.find(user_email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
 
-            password = USER_SHEET.row_values(player_email_row)[2]
+            password = USER_SHEET.row_values(player_email_row)[1]
 
             password_check = input("\nExisitng email was found, Please enter your password: \n")
             while True:
