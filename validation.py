@@ -23,68 +23,34 @@ USER_SHEET = SHEET.worksheet('users')
 
 name = ''
 email = ''
-password = ''
 user_details = []
 
-def check_user() -> str:
+def start_game():
     """
-    Checks if player has played previously,
-    Calls on get email function to validate the email
+    This function will check if the user has played the game before
     """
-    global email
-    email = ''
-    print('Is this your First time here?\n')
-    reply = '1) Yes \n2) No\n'
-    response = input(reply).lower()
+    print("Have you played before?")
+    question = "1) Yes\n2) No"
+    answer = input(question)
 
-    while response not in ('1', 'y', '2', 'n'):
-        print('\nPlease choose one of the below option:\n')
-        response = input(reply).lower()
-
-    if response == '1' or response == 'y':
-        print('\nYou answered yes')
-        get_email()
-        register_user()
-        return True
-
-    elif response == '2' or response == 'n':
-        print('\nYou answered no')
-        get_email()
+    if answer == "1" or answer == "y":
         player_login()
-        return False
+    elif answer == "2" or answer == "n":
+        register_user()
+    
+    return answer
 
 def get_email():
     """
-    This function will get the players email to store in the players spreadsheet
+    This function will just get the users email
     """
-    global email
-    email = input("\nWhat is your email address?:\n").lower()
-    validate_user_email(email)
-    user_email = email
-    existing_email = check_emails(user_email)
-    if existing_email:
-        found_email = ("\nEmail is already registered! Would you like to use a different email or Login under this email?: \n1) Login with this email: " + user_email + " \n2) Register with a different email \n")
-        choice = input(found_email).lower()
+    while True:
+        email = input(f"{name} - what's your email address?\n").strip()
 
-        while choice not in ("1", "2"):
-            print("Please select a valid option from below:\n")
-            choice = input(found_email).lower
-
-        if choice == "1":
-            time.sleep(2)
-            return True
-        elif choice == "2":
-            print("=======================================")
-            print("\nSending you to the register page...\n")
-            print("=======================================")
-            time.sleep(2)
-            register_user()
-    else:
-        time.sleep(2)
-        print_loading()
-
-
-    return email, True
+        if validate_user_email(email):
+            break
+    
+    return email
 
 def validate_user_email(email: str):
     """
@@ -101,24 +67,6 @@ def validate_user_email(email: str):
         get_email()
         return False
 
-def get_new_password():
-    global password
-
-    password_prompt = ("\nPlease enter a password: \n")
-    password = input(password_prompt)
-
-    try:
-        if len(password) < 7:
-            raise ValueError("""
-                Password needs to be at least 8 Characters long"
-            """)
-        else:
-            return True
-    except ValueError as e:
-        print("Password needs to be at least 8 Characters long")
-        get_new_password()
-        return False
-                
 def get_user_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
@@ -134,28 +82,38 @@ def register_user():
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
+    print("Creating a new user...")
     print_loading()
-    time.sleep(2)
-    clear_screen()
-    get_user_name()
-    get_new_password()
-    print("=======================================")
-    print("\nAdding your details to the database...\n")
-    print("=======================================")
-    time.sleep(2)
-    print("=======================================")
-    print("\nDetails Added!\n")
-    print("=======================================")
-    user_details.append(name)
-    user_details.append(email)
-    user_details.append(password)
-    USER_SHEET.append_row(user_details)
-    clear_screen()
-    print("=======================================")
-    print("\nLoading the quiz...\n")
-    print("=======================================")
-    time.sleep(2)
-    return True 
+    new_user = create_new_user()
+    update_user_worksheet(new_user)
+    
+def create_new_user():
+    """
+    Creates the new user
+    Gets the players name and email
+    Checks if the information is already in the database
+    """
+    email_column = USER_SHEET.col_values(1)
+
+    while True:
+        name = input("What is your name: \n")
+        user_details.append(name)
+        break
+
+    while True:
+        user_email = get_email()
+
+        if user_email not in email_column:
+            print("Thank you!")
+            break
+
+        else:
+            print(f"Sorry {name}, this email is already used.")
+            print("Please try another email")
+    return [name, email]
+
+def update_user_worksheet(data: list):
+    USER_SHEET.append_row(data)
 
 def player_login():
     """
@@ -173,31 +131,38 @@ def player_login():
             player_email_row = USER_SHEET.find(user_email).row
             player_name = USER_SHEET.row_values(player_email_row)[0]
 
-            password = USER_SHEET.row_values(player_email_row)[1]
-
-            password_check = input("\nPlease enter your password: \n")
-            while True:
-                if password_check == password:
-                    print("Welcome back " + player_name)
-                    break
-                else:
-                    print(password)
-                    print("Incorrect password, please try again or type q to go back\n")
-                    password_check = input("Please enter your password: \n")
-                    if password_check.lower() == "q":
-                        check_user()
-                        break
-                    else:
-                        continue
-        else:
-            print("\nEmail not found in the database, re-directing you to the registration page...")
-            print("=======================================")
-            print("\nEmail Saved...\n")
-            print("=======================================")
-            time.sleep(2)
-            clear_screen()
-            register_user()
+            print("Welcome", player_name + "!")
             break
+        else:
+            input_correct_email()
+            break
+
+def input_correct_email():
+    """
+    Asks players to input their email
+    again if the email was not found in the datebase
+    """
+    print("Sorry this email is not registered\n")
+    email_option = email_not_registered()
+
+    if email_option == "1":
+        print("Please write your email again:")
+    elif email_option == "2":
+        register_user()
+
+def email_not_registered() -> str:
+    """
+    Called when the users email is not registered on the database
+    Give the user an option to enter another email or create a new user
+    """
+    print("Would you like to: ")
+    options = "1) Try another email\n2) Create a new account\n"
+    email_option = input(options)
+
+    while email_option not in ("1", "2"):
+        print("Please choose between one of the option:")
+        email_option = input(options)
+    return email_option
 
 def total_scores():
     """
@@ -238,5 +203,3 @@ def print_loading():
     print("=======================================")
     print("\nLoading...\n")
     print("=======================================")
-
-check_user()

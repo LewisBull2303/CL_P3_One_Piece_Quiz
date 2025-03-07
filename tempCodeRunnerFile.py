@@ -123,7 +123,7 @@ def main_menu():
     want to quit they can do so from here
     """
     print("Please choose an option from below:\n")
-    menu_options = "1) Play\n2) Scoreboard\n3) How to play\n4) Quit\n"
+    menu_options = "1) Play\n2) Scoreboard\n3) How to play\n4) Quit"
     selected_option = input(menu_options)
     
     while selected_option not in ("1", "2", "3", "4"):
