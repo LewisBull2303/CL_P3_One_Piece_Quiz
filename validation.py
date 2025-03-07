@@ -100,7 +100,8 @@ def create_new_user() -> list:
     global email
     global name
     global user_details
-    email_column = USER_SHEET.col_values(1)
+    email_column = USER_SHEET.col_values(2)
+    print(email_column)
 
     while True:
         name = input("What is your name: \n")
@@ -113,7 +114,6 @@ def create_new_user() -> list:
         if user_email not in email_column:
             print("Thank you!")
             user_details.append(email)
-            print(user_details)
             break
 
         else:
