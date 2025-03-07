@@ -35,11 +35,17 @@ def start_game():
     question = "1) Yes\n2) No\n"
     answer = input(question)
 
-    if answer == "1" or answer == "y":
-        player_login()
-    elif answer == "2" or answer == "n":
-        register_user()
-    
+    while True:
+        if answer == "1" or answer == "y":
+            player_login()
+            break
+        elif answer == "2" or answer == "n":
+            register_user()
+            break
+        else:
+            print("Please choose either 1 or 2")
+            continue
+        
     return answer
 
 def get_email() -> str:
@@ -104,7 +110,6 @@ def create_new_user() -> list:
     global name
     global user_details
     email_column = USER_SHEET.col_values(2)
-    print(email_column)
 
     while True:
         name = input("\nWhat is your name: \n")
