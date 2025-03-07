@@ -39,14 +39,12 @@ def check_user() -> str:
 
     if response == '1' or response == 'y':
         print('You answered yes\n')
-        get_email()
-        print(f'\nYour email is {email}\n')
-        player_login()
+        register_user
         return True
 
     elif response == '2' or response == 'n':
         print('You answered no\n')
-        register_user()
+        player_login()
         return False
 
 def get_email():
@@ -96,18 +94,9 @@ def get_user_name():
     """
     global name
     global player_name
-    try:
-        player_email_row = USER_SHEET.find(email).row
-        player_name = USER_SHEET.row_values(player_email_row)[0]
-        print('\nWelcome,: ' + player_name + "\n")
-        input('Enter any key to continue:\n')
-
-        name = player_name
-        return player_name, True
-
-    except AttributeError:
-        print('\nEmail was not found in past player records, adding now')
-        player_login()
+    name = input("\nWhat is your name?: \n")
+    name = player_name
+    return player_name, True
 
 def register_user():
     """
