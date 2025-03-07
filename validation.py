@@ -43,11 +43,13 @@ def check_user() -> str:
 
     if response == '1' or response == 'y':
         print('\nYou answered yes')
+        get_email()
         register_user()
         return True
 
     elif response == '2' or response == 'n':
         print('\nYou answered no')
+        get_email()
         player_login()
         return False
 
@@ -70,6 +72,7 @@ def get_email():
 
         if choice == "1":
             time.sleep(2)
+            return True
         elif choice == "2":
             print("=======================================")
             print("\nSending you to the register page...\n")
@@ -77,6 +80,7 @@ def get_email():
             time.sleep(2)
             register_user()
     else:
+        time.sleep(2)
         print_loading()
 
 
@@ -97,7 +101,7 @@ def validate_user_email(email: str):
         get_email()
         return False
 
-def get_password():
+def get_new_password():
     global password
 
     password_prompt = ("\nPlease enter a password: \n")
@@ -108,9 +112,11 @@ def get_password():
             raise ValueError("""
                 Password needs to be at least 8 Characters long"
             """)
+        else:
+            return True
     except ValueError as e:
         print("Password needs to be at least 8 Characters long")
-        get_password()
+        get_new_password()
         return False
                 
 def get_user_name():
@@ -128,17 +134,16 @@ def register_user():
     name in order for them to be saved. This was the player can login again under the
     same details again if they play more than once
     """
-    print("=======================================")
-    print("\nLoading...\n")
-    print("=======================================")
+    print_loading()
     time.sleep(2)
     clear_screen()
-    get_email()
     get_user_name()
-    get_password()
-    print("\nAdding your details to the database...")
+    get_new_password()
+    print("=======================================")
+    print("\nAdding your details to the database...\n")
     print("=======================================")
     time.sleep(2)
+    print("=======================================")
     print("\nDetails Added!\n")
     print("=======================================")
     user_details.append(name)
@@ -150,6 +155,7 @@ def register_user():
     print("\nLoading the quiz...\n")
     print("=======================================")
     time.sleep(2)
+    return True 
 
 def player_login():
     """
@@ -159,7 +165,6 @@ def player_login():
     """
     global password
     global email
-    get_email()
     while True:
         user_email = email
         existing_email = check_emails(user_email)
@@ -186,9 +191,13 @@ def player_login():
                         continue
         else:
             print("\nEmail not found in the database, re-directing you to the registration page...")
+            print("=======================================")
+            print("\nEmail Saved...\n")
+            print("=======================================")
             time.sleep(2)
             clear_screen()
             register_user()
+            break
 
 def total_scores():
     """
@@ -229,3 +238,5 @@ def print_loading():
     print("=======================================")
     print("\nLoading...\n")
     print("=======================================")
+
+check_user()
