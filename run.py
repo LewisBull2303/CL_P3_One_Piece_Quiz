@@ -17,7 +17,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
 SCOREBOARD = SHEET.worksheet('scores')
-PLAYER_SHEET = SHEET.worksheet('players')
+PLAYER_SHEET = SHEET.worksheet('users')
 
 score = 0
 player_score = []
