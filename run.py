@@ -179,7 +179,8 @@ def leaderboard():
             break
         else:
             print(Col.RED + "Please choose a correct option Y or N")
-            continue
+            add_score = input("Would you like to add your score to the scoreboard? Y or N\n").lower()
+            
         
 
 def update_leaderboard():
