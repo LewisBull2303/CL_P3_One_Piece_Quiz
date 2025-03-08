@@ -270,6 +270,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
+|Game Rule/Instructions|How to play option on the scoreboard| Users are presented with the game instructions and how to play|Works as expected|
 
 <details>
  <summary>Images</summary>
