@@ -442,6 +442,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
 
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
 |Register|Prompt the user for their details|When the user registers they are asked for their name and email. If the email already exists it will notify the player. If it does not the details will be added to the spreadsheet|Works as expected|
 
 <details>
