@@ -60,7 +60,7 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 
 ## Technical Design
 
-Flowcharts:
+### Flowcharts:
 <details>
  <summary>Flowcharts</summary>
 
@@ -236,12 +236,24 @@ When choosing to quit, the user exits the program with a goodbye message.
 ### Manual Testing
 
 1. As a user, I want to have clear options in the main menu
+
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Main Menu|Option 1 - Play Game| Users are asked if they have played the game before|Works as expected|
 |Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
 |Main Menu|Option 3 - Scoreboard|Users are presented with the scoreboard|Works as expected|
-|Main Menu|Option 4 - Quit|The teminal quits and stops the game|Works as expected|
+|Main Menu|Option 4 - Quit|The teminal quits and stops the game, and a message saying thank you for playing pops up|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/4d8748ae-1cb0-4d41-b450-eebff03972dd)
+![image](https://github.com/user-attachments/assets/b413da7f-69f5-4391-a304-a4e330c3ca45)
+![image](https://github.com/user-attachments/assets/71590224-f065-433c-861d-935d9029c5f0)
+
+
+</details>
+</br>
 
 2. As a user, I want to be able to read the rules and have instructions for the game
 3. As a user, I want to be able to enter my name
