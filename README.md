@@ -1,4 +1,4 @@
-# ONE PIECE QUIZ GAME
+![image](https://github.com/user-attachments/assets/6bc10e62-9896-4bb8-9381-f354441a8177)# ONE PIECE QUIZ GAME
 ## Developer: Lewis Bull
 
 ## About
@@ -289,8 +289,54 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 4. As a user, I want to be able to enter my email
-6. As a user, I want the game to catch if I enter my email after I already registered
-7. As a user, I want feedback throughout the game
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Prompt the user for their email|When the user logs in they are asked for their email to confirm that they have played before|Works as expected|
+|Register|Prompt the user for their email|When the user registers they are asked for their email. It then gets saved to the database|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/21e13861-4e0c-42ab-a927-6e123515fa47)
+![image](https://github.com/user-attachments/assets/5b5d5b21-2990-4c7e-92b9-7da453b74ca0)
+
+</details>
+</br>
+
+5. As a user, I want the game to catch if I enter my email after I already registered
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Prompt the user for their email|When the user logs in if their email is already registered it will send a welcome message|Works as expected|
+|Register|Prompt the user for their email|When the user registers they are asked for their email. If the email already exists it will notify the player|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/956479c2-782d-44a9-ba50-42553119f796)
+![image](https://github.com/user-attachments/assets/894d64a7-3a5b-4891-8ed8-4a162064accd)
+
+</details>
+</br>
+
+6. As a user, I want feedback throughout the game
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs and incorrect option they are informed until the input is valid|Works as expected|
+|Feedback throughout the validation|Players are informed of incorrect inputs|When the user inputs incorrect information they are informed and validation will only continue when the input is correct|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/7bcd358e-8eec-4c9d-b77c-8d08883ff3bd)
+![image](https://github.com/user-attachments/assets/8909a981-ecd0-4ccb-85e2-a0e725d8ac6d)
+![image](https://github.com/user-attachments/assets/0faf713e-2f53-40db-a9ed-785a89263399)
+![image](https://github.com/user-attachments/assets/91881b65-90e4-42e7-bf0b-78f2d894fd21)
+
+</details>
+</br>
+
 8. As a user, I want to know my score
 9. As a user, I want to be able to play multiple times after logging in
 10. As a user, I want to see a scoreboard of all the best players
