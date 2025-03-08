@@ -61,11 +61,16 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 ## Technical Design
 
 Flowcharts:
-Validation
+<details>
+ <summary>Flowcharts</summary>
+
 ![image](https://github.com/user-attachments/assets/89742f06-f318-46de-896e-c9b31525fcc6)
 
-Main Game:
 ![image](https://github.com/user-attachments/assets/ec256342-0840-4aad-b63f-d19cf4783580)
+
+</details>
+</br>
+<details>
 
 ## Technologies Used
 
