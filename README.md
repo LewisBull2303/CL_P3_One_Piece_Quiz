@@ -229,7 +229,38 @@ When choosing to quit, the user exits the program with a goodbye message.
 - The user is then asked if they want to add their score to the scoreboard.
 - If the user chooses no, then nothing will happen and the user will be prompted to press any key to return to the main menu.
 - If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
-- User Stories Answered: 
+- User Stories Answered:
+
+## Testing
+
+### Manual Testing
+
+1. As a user, I want to have clear options in the main menu
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Main Menu|Option 1 - Play Game| Users are asked if they have played the game before|Works as expected|
+|Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
+|Main Menu|Option 3 - Scoreboard|Users are presented with the scoreboard|Works as expected|
+|Main Menu|Option 4 - Quit|The teminal quits and stops the game|Works as expected|
+
+2. As a user, I want to be able to read the rules and have instructions for the game
+3. As a user, I want to be able to enter my name
+4. As a user, I want to be able to enter my email
+5. As a user, I want the game to catch if I enter my email after I already registered
+6. As a user, I want feedback throughout the game
+7. As a user, I want to know my score
+8. As a user, I want to be able to play multiple times after logging in
+9. As a user, I want to see a scoreboard of all the best players
+10. As a user, I want to be able to login if I return
+
+
+11. As a site owner, I want user to have feedback from the game in real-time 
+12. As a site owner, I want my UI to be obvious and easy to navigate for my users
+13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+14. As a site owner, I want the user to know if there was a wrong input
+15. As a site owner, I want the users data to be validated to check if its correct
+16. As a site owner, I want the user to be able to choose if they want to upload their score
+17. As a site owner, I want the user to be able to login after closing the game
 
 ### Quit game
 - On the main menu the user can choose to quit the game which will display a goodbye message.
