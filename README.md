@@ -250,29 +250,60 @@ When choosing to quit, the user exits the program with a goodbye message.
 ![image](https://github.com/user-attachments/assets/4d8748ae-1cb0-4d41-b450-eebff03972dd)
 ![image](https://github.com/user-attachments/assets/b413da7f-69f5-4391-a304-a4e330c3ca45)
 ![image](https://github.com/user-attachments/assets/71590224-f065-433c-861d-935d9029c5f0)
-
+![image](https://github.com/user-attachments/assets/7c60c3a1-a145-4d24-ad0a-80f0099027ef)
+![image](https://github.com/user-attachments/assets/2f4151f1-59c4-41ed-bbd6-8a93c023f6b6)
 
 </details>
 </br>
 
 2. As a user, I want to be able to read the rules and have instructions for the game
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/7c60c3a1-a145-4d24-ad0a-80f0099027ef)
+
+</details>
+</br>
+
+
 3. As a user, I want to be able to enter my name
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Saved Name in the database|When the user registers they are asked for their name. When they login the database fetches the name and prints it back to the user with a welcome message|Works as expected|
+|Register|Prompt the user for their name|When the user registers they are asked for their name. It then gets saved to the database|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/3bb309a1-e3b6-431f-8a32-d2c24c8787e8)
+![image](https://github.com/user-attachments/assets/956479c2-782d-44a9-ba50-42553119f796)
+![image](https://github.com/user-attachments/assets/77456edb-5ef7-4605-904f-42b45beb4793)
+
+</details>
+</br>
+
 4. As a user, I want to be able to enter my email
-5. As a user, I want the game to catch if I enter my email after I already registered
-6. As a user, I want feedback throughout the game
-7. As a user, I want to know my score
-8. As a user, I want to be able to play multiple times after logging in
-9. As a user, I want to see a scoreboard of all the best players
-10. As a user, I want to be able to login if I return
+6. As a user, I want the game to catch if I enter my email after I already registered
+7. As a user, I want feedback throughout the game
+8. As a user, I want to know my score
+9. As a user, I want to be able to play multiple times after logging in
+10. As a user, I want to see a scoreboard of all the best players
+11. As a user, I want to be able to login if I return
 
 
-11. As a site owner, I want user to have feedback from the game in real-time 
-12. As a site owner, I want my UI to be obvious and easy to navigate for my users
-13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
-14. As a site owner, I want the user to know if there was a wrong input
-15. As a site owner, I want the users data to be validated to check if its correct
-16. As a site owner, I want the user to be able to choose if they want to upload their score
-17. As a site owner, I want the user to be able to login after closing the game
+12. As a site owner, I want user to have feedback from the game in real-time 
+13. As a site owner, I want my UI to be obvious and easy to navigate for my users
+14. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+15. As a site owner, I want the user to know if there was a wrong input
+16. As a site owner, I want the users data to be validated to check if its correct
+17. As a site owner, I want the user to be able to choose if they want to upload their score
+18. As a site owner, I want the user to be able to login after closing the game
 
 ### Quit game
 - On the main menu the user can choose to quit the game which will display a goodbye message.
