@@ -538,3 +538,32 @@ When choosing to quit, the user exits the program with a goodbye message.
 |Players could register with an email more than once|Added a function which loops through all emails|
 |Game would not load correctly due to an error with the questions|Made questions_answer into a class instead of a function which resolved the issue|
 |Message for the player not having a good score would not appear|Adjusted the score for the player so it checks for the correct amount|
+
+## Deployment
+
+### Heroku Deployment
+
+Log in to your account at heroku.com.
+Create a new app, add a unique app name and choose your region.
+Click on create app.
+Go to "Settings".
+Under Config Vars store any sensitive data in .json file. Name 'Key' field, copy the .json file paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
+Add required buildpacks. For this project, I set up 'Python' and 'node.js' in that order.
+Go to "Deploy" and select "GitHub" in "Deployment method"
+To link up the Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+Choose the branch you want to buid your app from.
+Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+
+Making a Local Clone
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone
