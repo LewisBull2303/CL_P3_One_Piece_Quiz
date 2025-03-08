@@ -367,6 +367,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 8. As a user, I want to be able to play multiple times after logging in
+
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Login|Login boolean is True when the player logs in|When the player logs in the login bool is turned to True, That way the player can play multiple times without having to login again|Works as expected|
@@ -394,6 +395,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 10. As a user, I want to be able to login if I return
+
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Login|Player details saved to the database|When the player registers their details are saved to the database allowing them to login with the same email if they wish. Then a welcome back message is displayed|Works as expected|
