@@ -112,7 +112,7 @@ The quiz will ask you 15 random questions from a possible pool of 30\n
 You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
 The questions will be themed around the anime One Piece\n
 Some questions will be easier to answer and other more difficult\n
-At the end you will have the option to post your score onto the scoreboard to see how you did against
+At the end you will have the option to post your score onto the  to see how you did against
 the other players
     """)
     input(Col.YELLOW + "Enter any key to return to the home page")
@@ -142,7 +142,7 @@ def main_menu():
     elif selected_option == "2":
         clear_screen()
         ascii_logo()
-        print("Scoreboard")
+        print("\nScoreboard")
         print(tabulate(scoreboard_data))
         input(Col.YELLOW + "Press any key to return:\n")
         clear_screen()
