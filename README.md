@@ -79,6 +79,7 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 ## User Guide:
 <details>
  <summary>See the user manual here</summary>
+ 
 ### Main Menu
 When launching the game, users are greeted with a main menu featuring an ASCII art rendering of the jolly rodger of the Strawhat Pirates. Below this graphic, several options are provided.
 
