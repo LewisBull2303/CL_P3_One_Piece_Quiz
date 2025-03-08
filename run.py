@@ -100,19 +100,15 @@ def get_player_stats():
     """
     player_stats = {"Name": val.name, "Score": str(score), "Email": val.email}
 
-    print(f"Name {player_stats['Name']}")
-    print(f"Score: {player_stats['Score']}")
-    print(f"Email: {player_stats['Email']}")
-
     if score >= 7:
         print(
             Col.GREEN
-            + f"Congratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!"
+            + f"\nCongratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!\n"
         )
     else:
         print(
             Col.RED
-            + f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!"
+            + f"\nOh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!\n"
         )
 
 
