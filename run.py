@@ -117,6 +117,8 @@ the other players
     """)
     input(Col.YELLOW + "Enter any key to return to the home page")
     clear_screen()
+    ascii_logo()
+    main_menu()
     
 def main_menu():
     """
