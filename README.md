@@ -505,6 +505,9 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 17. As a site owner, I want the user to be able to login after closing the game
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
 |Login|Player details saved to the database|When the player registers their details are saved to the database allowing them to login with the same email if they wish. Then a welcome back message is displayed|Works as expected|
 
 <details>
