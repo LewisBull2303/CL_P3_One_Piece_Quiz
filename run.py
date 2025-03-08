@@ -3,6 +3,7 @@ from google.oauth2.service_account import Credentials
 import validation as val
 import os
 import time
+import colors as Col
 import random
 from tabulate import tabulate
 from datetime import datetime
@@ -32,7 +33,7 @@ def ascii_logo():
     This will be my function to print my logo
     """
 
-    print("""
+    print(Col.BLUE + """
 ⠀⠀⡶⠛⠲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡶⠚⢲⡀⠀
 ⣰⠛⠃⠀⢠⣏⠀⠀⠀⠀⣀⣠⣤⣤⣤⣤⣤⣤⣤⣀⡀⠀⠀⠀⣸⡇⠀⠈⠙⣧
 ⠸⣦⣤⣄⠀⠙⢷⣤⣶⠟⠛⢉⣁⣠⣤⣤⣤⣀⣉⠙⠻⢷⣤⡾⠋⢀⣠⣤⣴⠟
@@ -73,12 +74,12 @@ def quiz_start(questions):
     for question in questions_list:
         answer = input(question.cue).lower()
         if answer not in {"1", "2", "3", "4"}:
-            print("Wrong Answer!\n Please use 1, 2 or 3 to answer!")
+            print(Col.RED + "Wrong Answer!\n Please use 1, 2 or 3 to answer!")
         elif answer == question.answer:
             score += 1
-            print("\nCorrect!\n")
+            print(Col.GREEN + "\nCorrect!\n")
         else:
-            print("\nWrong Answer!\n")
+            print(Col.RED + "\nWrong Answer!\n")
     leaderboard()
 
 def get_player_stats():
@@ -98,9 +99,9 @@ def get_player_stats():
     print(f"Email: {player_stats['Email']}")
 
     if score >= 50:
-        print(f"Congratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!")
+        print(Col.GREEN + f"Congratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!")
     else:
-        print(f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!")
+        print(Col.RED + f"Oh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!")
 
 def instructions():
     """
@@ -114,7 +115,7 @@ Some questions will be easier to answer and other more difficult\n
 At the end you will have the option to post your score onto the scoreboard to see how you did against
 the other players
     """)
-    input("Enter any key to return to the home page")
+    input(Col.YELLOW + "Enter any key to return to the home page")
     clear_screen()
     
 def main_menu():
@@ -128,7 +129,7 @@ def main_menu():
     selected_option = input(menu_options)
     
     while selected_option not in ("1", "2", "3", "4"):
-        print("Please select an option either 1, 2, 3 or 4")
+        print(Col.RED + "Please select an option either 1, 2, 3 or 4")
         selected_option = input(menu_options)
     
     if selected_option == "1":
@@ -143,7 +144,7 @@ def main_menu():
         ascii_logo()
         print("Scoreboard")
         print(tabulate(scoreboard_data))
-        input("Press any key to return:\n")
+        input(Col.YELLOW + "Press any key to return:\n")
         clear_screen()
         main_menu()
     
@@ -157,7 +158,7 @@ def main_menu():
         exit()
 
 def leaderboard():
-    print(f"Good Job {val.name} your score was {score}\n")
+    print(Col.GREEN + f"Good Job {val.name} your score was {score}\n")
     add_score = input("Would you like to add your score to the scoreboard? Y or N\n").lower()
 
     while True:
@@ -167,14 +168,14 @@ def leaderboard():
             break
         
         elif add_score == "n":
-            print("Okay... returning to the main menu...")
+            print(Col.BLUE + "Okay... returning to the main menu...")
             time.sleep(2)
             print_loading()
             clear_screen()
             main_menu()
             break
         else:
-            print("Please choose a correct option Y or N")
+            print(Col.RED + "Please choose a correct option Y or N")
             continue
         
 
@@ -183,14 +184,14 @@ def update_leaderboard():
     This function will be called to add the players score 
     to the leaderboard and add their stats in too
     """
-    print("\nUpdating the leaderboard...\n")
+    print(Col.BLUE + "\nUpdating the leaderboard...\n")
     player_score.append(val.name)
     player_score.append(score)
     player_score.append(date)
     SCOREBOARD.append_row(player_score)
-    print("\nScoreboard has now been updated!")
+    print(Col.GREEN + "\nScoreboard has now been updated!")
 
-    input("Please press any key to return to the main menu: \n")
+    input(Col.YELLOW + "Please press any key to return to the main menu: \n")
     clear_screen()
     ascii_logo()
     main_menu()
