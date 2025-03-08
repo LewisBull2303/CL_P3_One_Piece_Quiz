@@ -299,6 +299,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 4. As a user, I want to be able to enter my email
+
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Login|Prompt the user for their email|When the user logs in they are asked for their email to confirm that they have played before|Works as expected|
