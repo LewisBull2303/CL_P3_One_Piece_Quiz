@@ -74,13 +74,13 @@ Flowcharts:
 ## Technologies Used
 
 ### Languages
-Python - programming language for the logic of the project, where the majority of the project is.
+- Python - programming language for the logic of the project, where the majority of the project is.
 
 ### Frameworks & Tools
-[Miro](https://miro.com/) was used to draw program flowchart
-[Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
-[GitHub](https://github.com/) was used as a remote repository to store project code
-[Google Cloud Platform](https://cloud.google.com/) was used to manage access and permissions to the Google Services such as Google auth, sheets etc.
-[Google Sheets](https://docs.google.com/spreadsheets/u/0/) was used to store users details
-[Heroku](https://www.heroku.com/) was used to load the project on to a website and hosting the website
-[Visual Studio Code](https://code.visualstudio.com/) VSCode was used to write the project code
+- [Miro](https://miro.com/) was used to draw program flowchart
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Cloud Platform](https://cloud.google.com/) was used to manage access and permissions to the Google Services such as Google auth, sheets etc.
+- [Google Sheets](https://docs.google.com/spreadsheets/u/0/) was used to store users details
+- [Heroku](https://www.heroku.com/) was used to load the project on to a website and hosting the website
+- [Visual Studio Code](https://code.visualstudio.com/) VSCode was used to write the project code
