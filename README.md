@@ -595,3 +595,23 @@ Making a Local Clone
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 7. Press Enter to create your local clone
+
+## Credits
+
+### Images
+- Flaticon was used to finding an icon for my page
+- Favicon was used to format the icon into something useable for my websit
+
+### Code
+- [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii) For allowing me to change an image to ASCII art.
+- Code Institute - for the Git template IDE and "Love Sandwiches" Project which helped with setting up the google sheet and google drive API.
+- [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained to me how to get a certain cells values which was immensly helpful.
+- [Stack Overflow](https://stackoverflow.com/questions) - Helped me with several errors and different fixes
+
+## Acknowledgements
+
+First and foremost, I would like to give a special thank you to my wonderful girlfriend Jasmine, whose support has made managing a full-time job, Open University, and Code Institute submissions possible.
+
+Special thank you also to Mo Shami, My mentor, whose help and guidance has been truly invaluable to me.
+
+The Live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
