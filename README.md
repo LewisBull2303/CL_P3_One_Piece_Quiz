@@ -71,7 +71,7 @@ Flowcharts:
 </details>
 </br>
 
-User Guide:
+## User Guide:
 <details>
  <summary>See the user manual here</summary>
 ### Main Menu
