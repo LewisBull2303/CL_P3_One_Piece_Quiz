@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import os
 import time
+import colors as Col
 
 from email_validator import validate_email, EmailNotValidError
 
@@ -43,7 +44,7 @@ def start_game():
             register_user()
             break
         else:
-            print("Please choose either 1 or 2")
+            print(Col.RED + "Please choose either 1 or 2")
             continue
         
     return answer
@@ -75,7 +76,7 @@ def validate_user_email(email: str):
         return True
     except EmailNotValidError as e:
         print(str(e))
-        print("Sorry this email is not valid, Please Try again!\n")
+        print(Col.RED + "Sorry this email is not valid, Please Try again!\n")
         get_email()
         return False
 
@@ -121,7 +122,7 @@ def create_new_user() -> list:
         user_email = get_email()
 
         if user_email not in email_column:
-            print("Thank you!")
+            print(Col.GREEN + "Thank you!")
             print(f"\n Welcome {name}")
             time.sleep(1)
             print_loading()
@@ -131,13 +132,13 @@ def create_new_user() -> list:
             break
 
         else:
-            print(f"Sorry {name}, this email is already used.\n")
+            print(Col.RED + f"Sorry {name}, this email is already used.\n")
             print("Would you like to: \n")
             options = f"1) Try another email\n2) Login with this email {email}\n"
             answer = input(options)
 
             while answer not in ("1", "2"):
-                print("Please Choose between one or two")
+                print(Col.RED + "Please Choose between one or two")
                 answer = input(options)
             
             if answer == "1":
@@ -175,7 +176,7 @@ def player_login():
             player_email_row = USER_SHEET.find(user_email).row
             name = USER_SHEET.row_values(player_email_row)[0]
             clear_screen()
-            print("Welcome back", name + "!")
+            print(Col.GREEN + "Welcome back", name + "!")
             time.sleep(2)
             print_loading()
             time.sleep(3)
@@ -190,7 +191,7 @@ def input_correct_email():
     Asks players to input their email
     again if the email was not found in the database
     """
-    print("Sorry this email is not registered\n")
+    print(Col.RED + "Sorry this email is not registered\n")
     email_option = email_not_registered()
 
     if email_option == "1":
@@ -210,7 +211,7 @@ def email_not_registered() -> str:
     email_option = input(options)
 
     while email_option not in ("1", "2"):
-        print("Please choose between one of the option:")
+        print(Col.RED + "Please choose between one of the option:")
         email_option = input(options)
     return email_option
 
