@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6bc10e62-9896-4bb8-9381-f354441a8177)# ONE PIECE QUIZ GAME
+# ONE PIECE QUIZ GAME
 ## Developer: Lewis Bull
 
 ## About
@@ -231,6 +231,10 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
 - User Stories Answered:
 
+### Quit game
+- On the main menu the user can choose to quit the game which will display a goodbye message.
+- User Stories Answered: 
+
 ## Testing
 
 ### Manual Testing
@@ -333,24 +337,179 @@ When choosing to quit, the user exits the program with a goodbye message.
 ![image](https://github.com/user-attachments/assets/8909a981-ecd0-4ccb-85e2-a0e725d8ac6d)
 ![image](https://github.com/user-attachments/assets/0faf713e-2f53-40db-a9ed-785a89263399)
 ![image](https://github.com/user-attachments/assets/91881b65-90e4-42e7-bf0b-78f2d894fd21)
+![image](https://github.com/user-attachments/assets/71b13bb5-36b7-48cb-8bf5-8c0f2f1ca8d3)
+![image](https://github.com/user-attachments/assets/6bc10e62-9896-4bb8-9381-f354441a8177)
+![image](https://github.com/user-attachments/assets/3ff6b1ee-c073-4a17-8d8a-cff430ff3b70)
 
 </details>
 </br>
 
-8. As a user, I want to know my score
-9. As a user, I want to be able to play multiple times after logging in
-10. As a user, I want to see a scoreboard of all the best players
-11. As a user, I want to be able to login if I return
+7. As a user, I want to know my score
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Scoreboard|Players are informed of their score at the end of the game|When the game ends the user is told their score and if it was over half the total achieveable score through 2 messages|Works as expected|
+|Main Menu|Option 2 - Scoreboard|When the player, Selects the scoreboard option they can see a table of all of the players and their scores, Including their own score|Works as expected|
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/0f33507f-49ea-4a0f-88d0-01d7aec371aa)
+![image](https://github.com/user-attachments/assets/645b5970-6cda-4a9e-be76-ae336f278ad3)
+
+</details>
+</br>
+
+8. As a user, I want to be able to play multiple times after logging in
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Login boolean is True when the player logs in|When the player logs in the login bool is turned to True, That way the player can play multiple times without having to login again|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/e24f7633-27bb-4b5a-a79c-eafffa565f43)
+
+</details>
+</br>
+
+9. As a user, I want to see a scoreboard of all the best players
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Main Menu|Option 2 - Scoreboard|When the player, Selects the scoreboard option they can see a table of all of the players and their scores|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/0f33507f-49ea-4a0f-88d0-01d7aec371aa)
+
+</details>
+</br>
+
+10. As a user, I want to be able to login if I return
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Player details saved to the database|When the player registers their details are saved to the database allowing them to login with the same email if they wish. Then a welcome back message is displayed|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/956479c2-782d-44a9-ba50-42553119f796)
+
+</details>
+</br>
+
+11. As a site owner, I want user to have feedback from the game in real-time
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Main Game|Players are informed of incorrect answers|When the user gives and incorrect answer they are informed|Works as expected|
+|Main Game|Players are informed of correct answers|When the user gives and correct answer they are informed|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/edfeb4c1-9e21-41ae-a4f0-c755dfbeac70)
+
+</details>
+</br>
+
+12. As a site owner, I want my UI to be obvious and easy to navigate for my users
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Main Menu|Option 1 - Play Game|Users are presented with a clear option to start the game|Works as expected|
+|Main Menu|Option 2 - How to play|Users are presented with a clear option to see the game rules and how to play|Works as expected|
+|Main Menu|Option 3 - Scoreboard|Users are presented with a clear option to see the scoreboard|Works as expected|
+|Main Menu|Option 4 - Quit|Users are presented with a clear option to quit the game|Works as expected|
+|Scoreboard|Press any key to quit|The user is able to press any key to return to the main menu|Works as expected|
+|How to play|Press any key to quit|The user is able to press any key to return to the main menu|Works as expected|
+|End Screen|Press any key to quit|The user is able to press any key to return to the main menu|Works as expected|
 
 
-12. As a site owner, I want user to have feedback from the game in real-time 
-13. As a site owner, I want my UI to be obvious and easy to navigate for my users
-14. As a site owner, I want the users names and emails to be saved in a google spreadsheet
-15. As a site owner, I want the user to know if there was a wrong input
-16. As a site owner, I want the users data to be validated to check if its correct
-17. As a site owner, I want the user to be able to choose if they want to upload their score
-18. As a site owner, I want the user to be able to login after closing the game
+<details>
+ <summary>Images</summary>
 
-### Quit game
-- On the main menu the user can choose to quit the game which will display a goodbye message.
-- User Stories Answered: 
+![image](https://github.com/user-attachments/assets/4d8748ae-1cb0-4d41-b450-eebff03972dd)
+![image](https://github.com/user-attachments/assets/b413da7f-69f5-4391-a304-a4e330c3ca45)
+![image](https://github.com/user-attachments/assets/71590224-f065-433c-861d-935d9029c5f0)
+![image](https://github.com/user-attachments/assets/7c60c3a1-a145-4d24-ad0a-80f0099027ef)
+![image](https://github.com/user-attachments/assets/2f4151f1-59c4-41ed-bbd6-8a93c023f6b6)
+![image](https://github.com/user-attachments/assets/c89a3673-749e-4764-b630-abf42d8eaaa0)
+
+</details>
+</br>
+
+13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+
+|Register|Prompt the user for their details|When the user registers they are asked for their name and email. If the email already exists it will notify the player. If it does not the details will be added to the spreadsheet|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/6c2eb791-343e-4ae5-895e-873f1040c7e4)
+![image](https://github.com/user-attachments/assets/df3ccaf0-c903-42d3-bce1-d584363213c2)
+
+</details>
+</br>
+
+14. As a site owner, I want the user to know if there was a wrong input
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs and incorrect option they are informed until the input is valid|Works as expected|
+|Feedback throughout the validation|Players are informed of incorrect inputs|When the user inputs incorrect information they are informed and validation will only continue when the input is correct|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/7bcd358e-8eec-4c9d-b77c-8d08883ff3bd)
+![image](https://github.com/user-attachments/assets/8909a981-ecd0-4ccb-85e2-a0e725d8ac6d)
+![image](https://github.com/user-attachments/assets/0faf713e-2f53-40db-a9ed-785a89263399)
+![image](https://github.com/user-attachments/assets/91881b65-90e4-42e7-bf0b-78f2d894fd21)
+![image](https://github.com/user-attachments/assets/71b13bb5-36b7-48cb-8bf5-8c0f2f1ca8d3)
+![image](https://github.com/user-attachments/assets/6bc10e62-9896-4bb8-9381-f354441a8177)
+![image](https://github.com/user-attachments/assets/3ff6b1ee-c073-4a17-8d8a-cff430ff3b70)
+
+</details>
+</br>
+ 
+15. As a site owner, I want the users data to be validated to check if its correct
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Email Validator|Emails are validated when the user inputs them|When the user inputs their email it is checked with an email validator to see if it is correct, if not an error will pop up|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+
+
+</details>
+</br>
+
+16. As a site owner, I want the user to be able to choose if they want to upload their score
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|End Screen|User is prompted if they want to upload their score|When the user has answered all questions they are prompted, with if they want to upload their score to the scoreboard|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/62f82c00-5731-4d59-8463-722b6146fd73)
+
+</details>
+</br>
+
+17. As a site owner, I want the user to be able to login after closing the game
+|Login|Player details saved to the database|When the player registers their details are saved to the database allowing them to login with the same email if they wish. Then a welcome back message is displayed|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/956479c2-782d-44a9-ba50-42553119f796)
+
+</details>
+</br>
+
