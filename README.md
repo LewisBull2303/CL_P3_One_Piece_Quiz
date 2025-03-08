@@ -167,3 +167,65 @@ When choosing to quit, the user exits the program with a goodbye message.
 - [Email_Validator](https://pypi.org/project/email-validator/) - I used this to check if the user is entering a valid email and if not to bring up an error
 - [Gspread](https://docs.gspread.org/_/downloads/en/v5.6.0/pdf/) - This was used to append rows to the database which is a google spreadsheet. It was also used to fetch existing information from the database
 - [Google.Oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  Module used to set up the authentication between the database and the user. It was needed in order to store data. A creds.json file was created with all of the details the API needs and was passed into the configs in heroku
+
+## Features
+
+### Main Menu
+- Gives the user 4 options to choose from when they first load up the game.
+- Gives the user a welcom message and shows off the ASCII Logo.
+- Gives the user the autonomy on what they what they want to do.
+- User Stories Answered:
+
+### Game Rule/Instructions
+- Clearly shows the rules of the game and how to play.
+- Allows the user to return when they type any key.
+- User Stories Answered:
+
+### Scoreboard
+- Clearly shows all of the users who have passed the game before and their scores
+- Updates the scoreboard based on the highest score
+- User Stories Answered: 
+
+### Play Game
+- When the user starts the game they are asked if they have played the game before.
+- The user can select yes or no and each option takes the user to a different part of the validation.
+- User Stories Answered:
+
+### Login
+- If the user says they have played before they are taken to the login part of the validation.
+- The user is prompted to enter their email.
+- If the email is not found in the database, they will be prompted to use a different email or to create a new account.
+- If the email is found already registered, I will log the user in and display a welcome message with the users name.
+- User Stories Answered: 
+
+### Register a New User
+- If the user says they have not played before they will be taken to the register part of the validation.
+- The user will be prompted to enter their name.
+- The user will then be prompted to enter their email.
+- The users email will be validated to make sure that it has an @ sign and a . in it.
+- User Stories Answered:
+
+### User Greeting
+- Once the user has logged in they will be displayed a welcom message with their name.
+- User Stories Answered:
+
+### Main Game:
+- The main part of the game is answering the quiz questions.
+- Once the user has logged in/registered, the game will start.
+- The user will be asked 15 out of 30 questions randomly selected, and the player will need to answer all of them.
+- The users score will be calculated based on how many answers they got correct.
+- After it is complete the user will be given the option to add their score to the scoreboard.
+- User Stories Answered:
+
+### Add Score to Scoreboard
+- When the user is finished playing the game, a custom message will be displayed depending on their score.
+- If the player scores below half the total points it will tell them that they need to study more.
+- If the player scores more than half the available points the game will congratulate them.
+- The user is then asked if they want to add their score to the scoreboard.
+- If the user chooses no, then nothing will happen and the user will be prompted to press any key to return to the main menu.
+- If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
+- User Stories Answered: 
+
+### Quit game
+- On the main menu the user can choose to quit the game which will display a goodbye message.
+- User Stories Answered: 
