@@ -45,7 +45,8 @@ def start_game():
             break
         else:
             print(Col.RED + "Please choose either 1 or 2")
-            continue
+            answer = input(question)
+            
         
     return answer
 
