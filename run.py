@@ -54,8 +54,6 @@ def ascii_logo():
 ⢰⠟⠛⠟⠁⣨⡿⢷⣤⣈⠙⢿⡙⠒⠓⠒⠓⠚⣹⠛⢉⣠⣾⠿⣧⡀⠙⠋⠙⣆
 ⠹⣄⡀⠀⠐⡏⠀⠀⠉⠛⠿⣶⣿⣦⣤⣤⣤⣶⣷⡾⠟⠋⠀⠀⢸⡇⠀⢠⣤⠟
 ⠀⠀⠳⢤⠼⠃⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠘⠷⢤⠾⠁⠀
-          
-
 """
     )
 
@@ -81,7 +79,7 @@ def quiz_start(questions):
     for question in questions_list:
         answer = input(question.cue).lower()
         if answer not in {"1", "2", "3", "4"}:
-            print(Col.RED + "Wrong Answer!\n Please use 1, 2 or 3 to answer!\n")
+            print(Col.RED + "Wrong Answer\n Please use 1, 2 or 3 to answer!\n")
             answer = input(question.cue).lower()
 
         if answer == question.answer:
@@ -103,18 +101,23 @@ def get_player_stats():
     if score >= 7:
         print(
             Col.GREEN
-            + f"\nCongratulations {player_stats['Name']} you scored {player_stats['Score']} you are a true one piece fan!\n"
+            + f"""\nCongratulations {player_stats['Name']}
+            you scored {player_stats['Score']}
+            you are a true one piece fan!\n"""
         )
     else:
         print(
             Col.RED
-            + f"\nOh no {player_stats['Name']} only scored {player_stats['Score']} you need to go back and study!\n"
+            + f"""\nOh no {player_stats['Name']}
+            you only scored {player_stats['Score']}
+            you need to go back and study!\n"""
         )
 
 
 def instructions():
     """
-    This function will explain to the player how the game will work and how they can win
+    This function will explain to the player how the game
+    will work and how they can win.
     """
     print(
         """
@@ -122,8 +125,8 @@ The quiz will ask you 15 random questions from a possible pool of 30\n
 You then have to chose an answer 1, 2 or 3. All questions are multiple choice\n
 The questions will be themed around the anime One Piece\n
 Some questions will be easier to answer and other more difficult\n
-At the end you will have the option to post your score onto the  to see how you did against
-the other players
+At the end you will have the option to post your score onto the
+to see how you did against the other players
     """
     )
     input(Col.YELLOW + "Enter any key to return to the home page")
@@ -135,8 +138,8 @@ the other players
 def main_menu():
     """
     This function will be the main menu for the player
-    When they are done with the quiz they will be re-directed here and when they
-    want to quit they can do so from here
+    When they are done with the quiz they will be
+    re-directed here and when they want to quit they can do so from here
     """
     print("Please choose an option from below:\n")
     menu_options = "1) Play\n2) Scoreboard\n3) How to play\n4) Quit\n"
@@ -249,10 +252,11 @@ questions_call = [
      1) Mera Mera Fruit\n \
      2) Gum Gum Fruit\n \
      3) Yami Yami Fruit\n ",
-    "What One Piece' character is a skilled swordsman who always carries three katanas with him?\n \
+    """What One Piece' character is a skilled swordsman
+    who always carries three katanas with him?\n \
      1) Brook\n \
      2) Zoro\n \
-     3) Sanji\n ",
+     3) Sanji\n """,
     "What is the name of the strongest swordsman?\n \
      1) King\n \
      2) Marco\n \
@@ -269,10 +273,11 @@ questions_call = [
      1) Buggy\n \
      2) Shiryu\n \
      3) Magellan\n ",
-    "What is the name of the dragon that helped the straw hats climb to Zou?\n \
+    """What is the name of the dragon that helped the straw hats
+    climb to Zou?\n \
      1) Nekozaemon\n \
      2) Ryunosuke\n \
-     3) Kuro\n ",
+     3) Kuro\n """,
     "Which of the below characters is an Admiral\n \
      1) Garp\n \
      2) Kuzan\n \
@@ -281,10 +286,11 @@ questions_call = [
      1) Going Merry\n \
      2) Thousand Sunny\n \
      3) Tsunami\n ",
-    "What is the first Island that the straw hats visit after the time skip?\n \
+    """What is the first Island that the straw hats
+    visit after the time skip?\n \
      1) Dressrosa\n \
      2) Punk Hazard\n \
-     3) Fish-man Island\n ",
+     3) Fish-man Island\n """,
     "What is the name of the drug Caesar created in the form of a candy?\n \
      1) SMILE\n \
      2) FUN\n \
@@ -301,10 +307,11 @@ questions_call = [
      1) Lulusia Kingdom\n \
      2) Kuraigana Kingdom\n \
      3) Kiseki Kingdom\n ",
-    "What is the name of the island where the Revolutionary Army's base is located?\n \
+    """What is the name of the island where the
+    Revolutionary Army's base is located?\n \
     1) Momoiro Island\n \
     2) Kuraigana Island\n \
-    3) Ruskaina Island\n ",
+    3) Ruskaina Island\n """,
     "What is the Military rank is Kong?\n \
      1) Vice-Admiral\n \
      2) Admiral\n \
@@ -337,10 +344,11 @@ questions_call = [
      1) Blackbeard\n \
      2) X Drake\n \
      3) Doflamingo\n ",
-    "Who sent all of the strawhats to different islands in the sabaody archipelago arc?\n \
+    """Who sent all of the strawhats to different islands
+    in the sabaody archipelago arc?\n \
      1) Kuma\n \
      2) Shanks\n \
-     3) Silvers Rayleigh\n ",
+     3) Silvers Rayleigh\n """,
     "Who Stowed away in a barrel after Wano on the Thousand Sunny?\n \
      1) Kin'mon\n \
      2) Raizo\n \

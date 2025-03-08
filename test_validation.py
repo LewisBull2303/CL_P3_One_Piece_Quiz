@@ -2,13 +2,14 @@ import unittest
 import validation as val
 from email_validator import EmailSyntaxError
 
+
 class TestEmailValidation(unittest.TestCase):
     """
     This class will verify the user's email
     """
     def test_validate_email(self):
         self.assertTrue(val.validate_email("correct_email@gmail.com"))
-    
+
     def test_validate_wrong_email(self):
         self.assertFalse(val.validate_email("correct_email@gmail"))
         self.assertFalse(val.validate_email("correct_emailgmail.com"))

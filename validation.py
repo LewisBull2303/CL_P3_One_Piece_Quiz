@@ -26,6 +26,7 @@ name = ''
 email = ''
 user_details = []
 
+
 def start_game():
     """
     This function will check if the user has played the game before
@@ -46,9 +47,9 @@ def start_game():
         else:
             print(Col.RED + "Please choose either 1 or 2")
             answer = input(question)
-            
-        
+
     return answer
+
 
 def get_email() -> str:
     """
@@ -65,6 +66,7 @@ def get_email() -> str:
             break
 
     return email
+
 
 def validate_user_email(email: str):
     """
@@ -84,6 +86,7 @@ def validate_user_email(email: str):
         get_email()
         return False
 
+
 def get_user_name():
     """
     This function will scan my spreadsheet for the players email and retrieve
@@ -93,18 +96,21 @@ def get_user_name():
     name = input("\nWhat is your name?: \n")
     return name, True
 
+
 def register_user():
     """
-    This function will add the new players to the spreadsheet, adding their email and
-    name in order for them to be saved. This was the player can login again under the
-    same details again if they play more than once
+    This function will add the new players to the spreadsheet,
+    adding their email andname in order for them to be saved.
+    This was the player can login again under the same details
+    again if they play more than once
     """
     print("\nCreating a new user...")
     print_loading()
     create_new_user()
     if email not in USER_SHEET.col_values(2):
         update_user_worksheet()
-    
+
+
 def create_new_user() -> list:
     """
     Creates the new user
@@ -138,13 +144,14 @@ def create_new_user() -> list:
         else:
             print(Col.RED + f"Sorry {name}, this email is already used.\n")
             print("Would you like to: \n")
-            options = f"1) Try another email\n2) Login with this email {email}\n"
+            options = f"""1) Try another email\n
+            2) Login with this email {email}\n"""
             answer = input(options)
 
             while answer not in ("1", "2"):
                 print(Col.RED + "Please Choose between one or two")
                 answer = input(options)
-            
+
             if answer == "1":
                 clear_screen()
                 print_loading()
@@ -158,8 +165,10 @@ def create_new_user() -> list:
                 break
     return [name, email.lower()]
 
+
 def update_user_worksheet():
     USER_SHEET.append_row(user_details)
+
 
 def player_login():
     """
@@ -190,6 +199,7 @@ def player_login():
             input_correct_email()
             break
 
+
 def input_correct_email():
     """
     Asks players to input their email
@@ -205,6 +215,7 @@ def input_correct_email():
         time.sleep(2)
         register_user()
 
+
 def email_not_registered() -> str:
     """
     Called when the users email is not registered on the database
@@ -219,9 +230,10 @@ def email_not_registered() -> str:
         email_option = input(options)
     return email_option
 
+
 def total_scores():
     """
-    this function will calculate the total score of all players 
+    this function will calculate the total score of all players.
     """
     score_column = SCOREBOARD.col_values(2)
     total_score = 0
@@ -234,11 +246,12 @@ def total_scores():
 
     return total_score
 
-def check_emails(email : str) -> bool:
+
+def check_emails(email: str) -> bool:
     """
     This function will check if the user has previously logged in and
-    didnt remember, it will loop through all of the emails and check if the email has
-    already been registered
+    didnt remember, it will loop through all of the emails and
+    check if the email has already been registered
     """
     email_column = USER_SHEET.col_values(2)
 
@@ -247,12 +260,14 @@ def check_emails(email : str) -> bool:
     else:
         return False
 
+
 def clear_screen():
     """
     This will clear the terminal so all of the information
     on the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
+
 
 def print_loading():
     print("=" * 30)
