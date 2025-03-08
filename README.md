@@ -485,7 +485,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 <details>
  <summary>Images</summary>
 
-
+![image](https://github.com/user-attachments/assets/8cd0f153-cba3-4839-9e78-364acef0cc3e)
 
 </details>
 </br>
