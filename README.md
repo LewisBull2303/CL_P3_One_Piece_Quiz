@@ -1,6 +1,8 @@
 # ONE PIECE QUIZ GAME
 ## Developer: Lewis Bull
 
+![Uploading image.png…]()
+
 ## About
 This is a command-line version of a One Piece-themed quiz game for a single player.
 
