@@ -22,3 +22,38 @@ Create a game that is easy to play and clear to the user
 Ensure that players understand the objective of the quiz game
 Provide feedback to the player during gameplay (e.g., correct/incorrect answers, score updates)
 Offer an enjoyable and interactive experience for One Piece fans
+
+## User Experience
+
+### Target Audience
+The target audience of this game is One Piece fans of all ages. This is because the trivia is all based around One Piece and 
+
+### User Requirements and Expectations
+
+A simple, fun and error-free game experience
+Easy and intuitive navigation through the quiz
+The ability to personalize the game by entering the player's name
+Clear feedback on game results (e.g., correct/incorrect answers, final score)
+
+## User Stories
+
+### Users
+1. As a user, I want to have clear options in the main menu
+2. As a user, I want to be able to read the rules and have instructions for the game
+3. As a user, I want to be able to enter my name
+4. As a user, I want to be able to enter my email
+5. As a user, I want the game to catch if I enter my email after I already registered
+6. As a user, I want feedback throughout the game
+7. As a user, I want to know my score
+8. As a user, I want to be able to play multiple times after logging in
+9. As a user, I want to see a scoreboard of all the best players
+10. As a user, I want to be able to login if I return
+
+### Site Owner 
+11. As a site owner, I want user to have feedback from the game in real-time 
+12. As a site owner, I want my UI to be obvious and easy to navigate for my users
+13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+14. As a site owner, I want the user to know if there was a wrong input
+15. As a site owner, I want the users data to be validated to check if its correct
+16. As a site owner, I want the user to be able to choose if they want to upload their score
+17. As a site owner, I want the user to be able to login after closing the game
