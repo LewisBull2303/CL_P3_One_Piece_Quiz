@@ -161,12 +161,17 @@ When choosing to quit, the user exits the program with a goodbye message.
 - [Heroku](https://www.heroku.com/) was used to load the project on to a website and hosting the website
 - [Visual Studio Code](https://code.visualstudio.com/) VSCode was used to write the project code
 
+### Python Libararies
+- OS - Used to clear the terminal so it is less clogged and better looking
+- random - Used to randomly select which questions will be asked to the user so each time the quiz is different
+- time - Used to get the date to be stored in the scoreboard
   
 ### Third Party Libraries
 - [Colorama](https://pypi.org/project/colorama/) - Colorama was used to add color and more life to my game which will make it more interesting and engaging to the user
 - [Email_Validator](https://pypi.org/project/email-validator/) - I used this to check if the user is entering a valid email and if not to bring up an error
 - [Gspread](https://docs.gspread.org/_/downloads/en/v5.6.0/pdf/) - This was used to append rows to the database which is a google spreadsheet. It was also used to fetch existing information from the database
 - [Google.Oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  Module used to set up the authentication between the database and the user. It was needed in order to store data. A creds.json file was created with all of the details the API needs and was passed into the configs in heroku
+- Tabultate - This was used to print our the scoreboard in an easy manner that looks good to the user.
 
 ## Features
 
