@@ -177,7 +177,7 @@ def main_menu():
 
 
 def leaderboard():
-    print(Col.GREEN + f"Good Job {val.name} your score was {score}\n")
+    get_player_stats()
     add_score = input(
         "Would you like to add your score to the scoreboard? Y or N\n"
     ).lower()
