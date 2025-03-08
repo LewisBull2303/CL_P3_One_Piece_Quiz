@@ -70,7 +70,6 @@ Flowcharts:
 
 </details>
 </br>
-<details>
 
 ## Technologies Used
 
