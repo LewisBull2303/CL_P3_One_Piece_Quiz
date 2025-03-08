@@ -71,6 +71,82 @@ Flowcharts:
 </details>
 </br>
 
+User Guide:
+<details>
+ <summary>See the user manual here</summary>
+### Main Menu
+When launching the game, users are greeted with a main menu featuring an ASCII art rendering of the jolly rodger of the Strawhat Pirates. Below this graphic, several options are provided.
+
+Operation: Input a numeric value and press the enter key to select an option.
+
+Play Game
+View Scoreboard
+View Game Rules
+Quit
+
+At any point, if a user enters a number that doesn't correspond to a valid option, they will be prompted to try again.
+
+### Play Game
+When choosing the “Play Game” option, users are asked if they have played the game before.
+
+Yes (1)
+No (2)
+If "Yes" (1) is selected
+If the user has played the game before, they will be prompted to log in using their email address if they have already registered.
+
+Player is asked for their email address.
+The system checks whether the email is registered.
+If the email is not found
+Players can choose one of the following options:
+
+Try another email (1)
+Create a new user (2)
+The user can continue to try different emails until they are matched with an existing one. Once a correct email is entered, a personalized greeting is displayed with the player’s name.
+
+If "No" (2) is selected
+If the user has never played before, they are given the option to create a new account.
+
+The following steps are required for both players:
+
+Enter their name.
+Provide an email address.
+Email validation:
+
+Email must be valid, containing exactly one "@" symbol and have a .com or .co.uk otherwise it will fail validation, (e.g., example@domain.com).
+The email address must not already exist in the database.
+
+### Game Start
+Once the player has logged in, the system greets them by name and the game begins.
+
+### Quiz
+Once the game starts the user will bew given 15 multiple choice questions all around the world of one piece, it will cover the story arcs, characters and lore of the one piece universe. Once the player has answered all of the questions the game will ask them if they want to submit their score to the scoreboard.
+
+### Scoreboard/Game Over:
+When the game ends the player can select if they want to add their score to the scoreboard the options are:
+1) Yes
+  If yes is chosen then the players name, score and the date they played will be uploaded to the scoreboard and sorted in the scoreboard for the highest score.
+2) No
+If no is chosen the player will be able to press any key and be returned to the main menu where they can play again if they want.
+
+### Go to Main Menu
+This option brings players back to the main menu of the program, where they can choose to view the rules, play another game, or quit.
+
+### Game Rules
+In this section, players can review the game rules. After reading, they can return to the main menu.
+
+Operation: Press any key and then enter to go back to the main menu.
+
+Operation: Input a numeric value and press enter key.
+
+### See the scoreboard:
+Selecting this option displays all of the players that have played before and that have completed the game and uploaded their score to the scoreboard
+
+### Quit Game
+When choosing to quit, the user exits the program with a goodbye message.
+
+</details>
+</br>
+
 ## Technologies Used
 
 ### Languages
