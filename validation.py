@@ -74,6 +74,9 @@ def validate_user_email(email: str):
     """
     try:
         validate_email(email)
+        print("=" * 30)
+        print("\nEmail Validated!\n")
+        print("=" * 30)
         return True
     except EmailNotValidError as e:
         print(str(e))
