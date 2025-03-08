@@ -527,3 +527,14 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
+## Bugs
+
+|Bug|Fix|
+|---|---|
+|User could enter nothing for the question and it would move on|Made it so it re-asks the question by adding the input again|
+|Infinite loop when entering nothing into the "Have you played before" Input|Made it so instead of continuing the while loop, It re-asks the input|
+|Colors were not loading properly|Imported the file correctly|
+|Bug where the users name would not load to the scoreboard|Corrected it so it passed the name as before it was not passing the name correctly|
+|Players could register with an email more than once|Added a function which loops through all emails|
+|Game would not load correctly due to an error with the questions|Made questions_answer into a class instead of a function which resolved the issue|
+|Message for the player not having a good score would not appear|Adjusted the score for the player so it checks for the correct amount|
