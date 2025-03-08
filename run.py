@@ -3,7 +3,7 @@ from google.oauth2.service_account import Credentials
 import validation as val
 import os
 import time
-import colors as Col
+from colors import Colors as Col
 import random
 from tabulate import tabulate
 from datetime import datetime

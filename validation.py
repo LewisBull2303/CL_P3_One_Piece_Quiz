@@ -2,7 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import os
 import time
-import colors as Col
+from colors import Colors as Col
 
 from email_validator import validate_email, EmailNotValidError
 
