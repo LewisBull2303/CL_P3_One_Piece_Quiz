@@ -500,7 +500,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|End Screen|User is prompted if they want to upload their score|When the user has answered all questions they are prompted, with if they want to upload their score to the scoreboard|Works as expected|
+|Scoreboard/End Screen prompt|User is prompted if they want to upload their score|When the user has answered all questions they are prompted, with if they want to upload their score to the scoreboard|Works as expected|
 
 <details>
  <summary>Images</summary>
