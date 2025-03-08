@@ -57,3 +57,14 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 15. As a site owner, I want the users data to be validated to check if its correct
 16. As a site owner, I want the user to be able to choose if they want to upload their score
 17. As a site owner, I want the user to be able to login after closing the game
+
+## Technical Design
+
+Flowcharts:
+Validation
+![image](https://github.com/user-attachments/assets/89742f06-f318-46de-896e-c9b31525fcc6)
+
+Main Game:
+![image](https://github.com/user-attachments/assets/ec256342-0840-4aad-b63f-d19cf4783580)
+
+
