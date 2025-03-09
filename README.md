@@ -705,6 +705,8 @@ I tested that this page works in different browsers: Edge, Firefox, Chrome, Safa
 
 Due to the nature of the project and the template provided by Code Institute, this project does not work on mobile devices or tablets. The screen is cut off and the user has no way of entering their numbers into the console to move from the main menu
 
+[Back to the Table of Contents](#Table-of-Content)
+
 ## Bugs
 
 |Bug|Fix|
