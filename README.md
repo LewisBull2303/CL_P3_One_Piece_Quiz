@@ -59,6 +59,8 @@ Ensure that players understand the objective of the quiz game
 Provide feedback to the player during gameplay (e.g., correct/incorrect answers, score updates)
 Offer an enjoyable and interactive experience for One Piece fans
 
+[Back to the Table of Contents](#Table-of-Content)
+
 ## User Experience
 
 ### Target Audience
@@ -70,6 +72,8 @@ A simple, fun and error-free game experience
 Easy and intuitive navigation through the quiz
 The ability to personalize the game by entering the player's name
 Clear feedback on game results (e.g., correct/incorrect answers, final score)
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## User Stories
 
@@ -95,6 +99,8 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 17. As a site owner, I want the user to be able to login after closing the game
 18. As a site owner, I want the user to be welcomed to the game
 
+[Back to the Table of Contents](#Table-of-Content)
+
 ## Technical Design
 
 ### Flowcharts:
@@ -109,6 +115,8 @@ The below flowcharts detail the process for the validation of the user, and how 
 
 </details>
 </br>
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## User Guide:
 <details>
@@ -212,6 +220,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 - [Gspread](https://docs.gspread.org/_/downloads/en/v5.6.0/pdf/) - This was used to append rows to the database which is a google spreadsheet. It was also used to fetch existing information from the database
 - [Google.Oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  Module used to set up the authentication between the database and the user. It was needed in order to store data. A creds.json file was created with all of the details the API needs and was passed into the configs in heroku
 - [Tabultate](http://pypi.org/project/tabulate/) - This was used to print our the scoreboard in an easy manner that looks good to the user.
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## Features
 
@@ -356,6 +366,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 ![image](https://github.com/user-attachments/assets/e301741f-ad07-48ca-a17b-3dbe3182942c)
 
 </details>
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## Testing
 
@@ -644,6 +656,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
+[Back to the Table of Contents](#Table-of-Content)
+
 ## Bugs
 
 |Bug|Fix|
@@ -655,6 +669,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 |Players could register with an email more than once|Added a function which loops through all emails|
 |Game would not load correctly due to an error with the questions|Made questions_answer into a class instead of a function which resolved the issue|
 |Message for the player not having a good score would not appear|Adjusted the score for the player so it checks for the correct amount|
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## Validation
 The original tool recommended by Code Institute([PEP8 Validator](http://pep8online.com/)) is down or has been taken off the internet, Therefore I used an online python code check called [pythonium](https://pythonium.net/linter) to check for any syntax errors and a library call [pycodestyle](https://pypi.org/project/pycodestyle/) to check for PEP8 validation:
@@ -690,6 +706,8 @@ The original tool recommended by Code Institute([PEP8 Validator](http://pep8onli
 ![image](https://github.com/user-attachments/assets/62e6e8d3-e374-4be5-863c-3deac502f35a)
 
 </details>
+
+[Back to the Table of Contents](#Table-of-Content)
 
 ## Deployment
 
@@ -737,5 +755,7 @@ Making a Local Clone
 First and foremost, I would like to give a special thank you to my wonderful girlfriend Jasmine, whose support has made managing a full-time job, Open University, and Code Institute submissions possible.
 
 Special thank you also to Mo Shami, My mentor, whose help and guidance has been truly invaluable to me.
+
+[Back to the Table of Contents](#Table-of-Content)
 
 The Live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
