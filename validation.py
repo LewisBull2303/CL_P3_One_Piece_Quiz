@@ -145,7 +145,7 @@ def create_new_user() -> list:
             print(Col.RED + f"Sorry {name}, this email is already used.\n")
             print("Would you like to: \n")
             options = f"""1) Try another email\n
-            2) Login with this email {email}\n"""
+2) Login with this email {email}\n"""
             answer = input(options)
 
             while answer not in ("1", "2"):
