@@ -102,15 +102,15 @@ def get_player_stats():
         print(
             Col.GREEN
             + f"""\nCongratulations {player_stats['Name']}
-            you scored {player_stats['Score']}
-            you are a true one piece fan!\n"""
+you scored {player_stats['Score']}
+you are a true one piece fan!\n"""
         )
     else:
         print(
             Col.RED
             + f"""\nOh no {player_stats['Name']}
-            you only scored {player_stats['Score']}
-            you need to go back and study!\n"""
+you only scored {player_stats['Score']}
+you need to go back and study!\n"""
         )
 
 
@@ -253,7 +253,7 @@ questions_call = [
      2) Gum Gum Fruit\n \
      3) Yami Yami Fruit\n ",
     """What One Piece' character is a skilled swordsman
-    who always carries three katanas with him?\n \
+who always carries three katanas with him?\n \
      1) Brook\n \
      2) Zoro\n \
      3) Sanji\n """,
@@ -274,7 +274,7 @@ questions_call = [
      2) Shiryu\n \
      3) Magellan\n ",
     """What is the name of the dragon that helped the straw hats
-    climb to Zou?\n \
+climb to Zou?\n \
      1) Nekozaemon\n \
      2) Ryunosuke\n \
      3) Kuro\n """,
@@ -287,7 +287,7 @@ questions_call = [
      2) Thousand Sunny\n \
      3) Tsunami\n ",
     """What is the first Island that the straw hats
-    visit after the time skip?\n \
+visit after the time skip?\n \
      1) Dressrosa\n \
      2) Punk Hazard\n \
      3) Fish-man Island\n """,
@@ -308,7 +308,7 @@ questions_call = [
      2) Kuraigana Kingdom\n \
      3) Kiseki Kingdom\n ",
     """What is the name of the island where the
-    Revolutionary Army's base is located?\n \
+Revolutionary Army's base is located?\n \
     1) Momoiro Island\n \
     2) Kuraigana Island\n \
     3) Ruskaina Island\n """,
@@ -345,7 +345,7 @@ questions_call = [
      2) X Drake\n \
      3) Doflamingo\n ",
     """Who sent all of the strawhats to different islands
-    in the sabaody archipelago arc?\n \
+in the sabaody archipelago arc?\n \
      1) Kuma\n \
      2) Shanks\n \
      3) Silvers Rayleigh\n """,
