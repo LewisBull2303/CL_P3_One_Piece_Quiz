@@ -232,7 +232,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 ### Main Menu
 - Gives the user 4 options to choose from when they first load up the game.
 - Gives the user a welcome message and displays the ASCII logo.
-- Gives the user autonomy over what they want to do.
+- Gives the user the autonomy to choose what they want to do.
 - User Stories Answered: 1
 
 <details>
@@ -255,7 +255,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 
 ### Scoreboard
-- Clearly shows all of the users who have passed the game before and their scores
+- Clearly shows all of the users who have completed the game before and their scores.
 - Updates the scoreboard based on the highest score
 - User Stories Answered: 7, 9
 
@@ -268,7 +268,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 ### Play Game
 - When the user starts the game they are asked if they have played the game before.
-- The user can select yes or no and each option takes the user to a different part of the validation.
+- The user can select 'yes' or 'no,' and each option takes the user to a different part of the validation
 - User Stories Answered: 1, 8, 10
 
 <details>
@@ -282,7 +282,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the user says they have played before they are taken to the login part of the validation.
 - The user is prompted to enter their email.
 - If the email is not found in the database, they will be prompted to use a different email or to create a new account.
-- If the email is found already registered, I will log the user in and display a welcome message with the users name.
+- If the email is already registered, the system will log the user in and display a welcome message with the user's name.
 - User Stories Answered: 3, 4, 5, 10, 13, 15, 17
 
 <details>
@@ -300,7 +300,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the user says they have not played before they will be taken to the register part of the validation.
 - The user will be prompted to enter their name.
 - The user will then be prompted to enter their email.
-- The users email will be validated to make sure that it has an @ sign and a . in it.
+- The user's email will be validated to ensure that it contains an '@' symbol and a fullstop.
 - User Stories Answered: 3, 4, 5, 
 
 <details>
@@ -329,7 +329,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - The main part of the game involves answering quiz questions.
 - Once the user has logged in/registered, the game will start.
 - The user will be asked 15 out of 30 questions randomly selected, and the player will need to answer all of them.
-- The users score will be calculated based on how many answers they got correct.
+- The user's score will be calculated based on how many questions they answered correctly.
 - After it is complete the user will be given the option to add their score to the scoreboard.
 - User Stories Answered: 1, 6, 7, 11, 12, 14, 16
 
@@ -348,7 +348,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the player scores more than half the available points the game will congratulate them.
 - The user is then asked if they want to add their score to the scoreboard.
 - If the user chooses 'No', nothing will happen, and the user will be prompted to press any key to return to the main menu.
-- If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
+- If the user chooses 'Yes,' their score will be added to the scoreboard, and they will be prompted to press any key to return to the main menu.
 - User Stories Answered: 7, 16
 
 <details>
@@ -359,7 +359,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 </details>
 
-### Quit game
+### Quit Game
 - On the main menu, the user can choose to quit the game, which will display a goodbye message.
 - User Stories Answered: 12
 
