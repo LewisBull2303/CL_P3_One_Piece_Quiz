@@ -623,7 +623,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 |Message for the player not having a good score would not appear|Adjusted the score for the player so it checks for the correct amount|
 
 ## Validation
-The original tool recommended by Code Institute([PEP8 Validator](http://pep8online.com/) is down or has been taken off the internet, Therefore I used an online python code check called pythorium to check for any syntax errors and a library call pycodestyle to check for PEP8 validation:
+The original tool recommended by Code Institute([PEP8 Validator](http://pep8online.com/)) is down or has been taken off the internet, Therefore I used an online python code check called [pythonium](https://pythonium.net/linter) to check for any syntax errors and a library call [pycodestyle](https://pypi.org/project/pycodestyle/) to check for PEP8 validation:
 
 <details>
  <summary>Run.py</summary>
@@ -646,6 +646,14 @@ The original tool recommended by Code Institute([PEP8 Validator](http://pep8onli
 
 ![image](https://github.com/user-attachments/assets/23e467ce-6652-4249-855d-f45cdf9abc27)
 ![image](https://github.com/user-attachments/assets/e981c4ff-c016-48c2-9fe8-e85e9b223b43)
+
+</details>
+
+<details>
+ <summary>colors.py</summary>
+
+![image](https://github.com/user-attachments/assets/562f0109-5fa3-4a73-8ce1-3095f72bb06a)
+![image](https://github.com/user-attachments/assets/62e6e8d3-e374-4be5-863c-3deac502f35a)
 
 </details>
 
