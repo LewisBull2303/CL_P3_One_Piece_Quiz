@@ -28,14 +28,15 @@
 8. [Features](#Features)
 9. [Testing](#Testing)
      - [Manual Testing](#Manual-Testing)
-10. [Bugs](#Bugs)
-11. [Validation](#Validation)
-12. [Deployment](#Deployment)
+10. [Testing Across Different Devices/Browsers](#Testing-Across-Different-Devices/Browsers)
+11. [Bugs](#Bugs)
+12. [Validation](#Validation)
+13. [Deployment](#Deployment)
      - [Heroku Deployment](#Heroku-Deployment)
-13. [Credits](#Credits)
+14. [Credits](#Credits)
      - [Images](#Images)
      - [Code](#Code)
-14. [Acknowledgements](#Acknowledgements)
+15. [Acknowledgements](#Acknowledgements)
 
 ## About
 This is a command-line version of a One Piece-themed quiz game for a single player.
@@ -675,6 +676,29 @@ When choosing to quit, the user exits the program with a goodbye message.
 </br>
 
 [Back to the Table of Contents](#Table-of-Content)
+
+## Testing Across Different Devices/Browsers
+The following devices were used to test the One Piece Quiz:
+
+- iPhone 13 (Physical)
+- PC/Desktop (Physical)
+- Samsung Galaxy Tablet A8 (Simulated)
+- Surface Pro 7 (Simulated)
+- ASUS Zenbook Fold (Simulated)
+
+### Browser Compatibility Tests
+The following browsers were tested for compatibility; all browsers were fully compatible:
+
+- Google Chrome (Fully Compatible)
+- Microsoft Edge (Fully Compatible)
+- Opera GX (Fully Compatible)
+- Firefox (Fully Compatible)
+
+### Testing Overview
+
+I tested that this page works in different browsers: Edge, Firefox, Chrome, Safari, and Opera GX.
+
+Due to the nature of the project and the template provided by Code Institute, this project does not work on mobile devices or tablets. The screen is cut off and the user has no way of entering their numbers into the console to move from the main menu
 
 ## Bugs
 
