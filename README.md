@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/12c50cad-d00a-41b8-96fd-009f766ef5e8)# ONE PIECE QUIZ GAME
+# ONE PIECE QUIZ GAME
 ## Developer: Lewis Bull
 
 [Live Website Link](https://clp3onepiecequiz-fb7dc9e72670.herokuapp.com/)
