@@ -687,7 +687,7 @@ The following devices were used to test the One Piece Quiz:
 
 - iPhone 13 (Physical)
 - PC/Desktop (Physical)
-- Samsung Galaxy Tablet A8 (Simulated)
+- Samsung Galaxy Tab A8 (Simulated)
 - Surface Pro 7 (Simulated)
 - ASUS Zenbook Fold (Simulated)
 
@@ -703,7 +703,7 @@ The following browsers were tested for compatibility; all browsers were fully co
 
 I tested that this page works in different browsers: Edge, Firefox, Chrome, Safari, and Opera GX.
 
-Due to the nature of the project and the template provided by Code Institute, this project does not work on mobile devices or tablets. The screen is cut off and the user has no way of entering their numbers into the console to move from the main menu
+Due to the template provided by Code Institute, this project does not function correctly on mobile devices or tablets. The screen is cut off, preventing the user from entering their numbers into the console to progress past the main menu.
 
 [Back to the Table of Contents](#Table-of-Content)
 
@@ -711,18 +711,18 @@ Due to the nature of the project and the template provided by Code Institute, th
 
 |Bug|Fix|
 |---|---|
-|User could enter nothing for the question and it would move on|Made it so it re-asks the question by adding the input again|
-|Infinite loop when entering nothing into the "Have you played before" Input|Made it so instead of continuing the while loop, It re-asks the input|
-|Colors were not loading properly|Imported the file correctly|
-|Bug where the users name would not load to the scoreboard|Corrected it so it passed the name as before it was not passing the name correctly|
+|User could leave the answer blank, and the game would still proceed|Made it so it re-asks the question by adding the input again|
+|An infinite loop occurred when leaving the 'Have you played before?' input blank|Modified the code to re-prompt the input instead of continuing the while loop.|
+|Colors were not loading properly|Resolved the issue by correctly importing the colors file.|
+|Fixed an issue where the user's name was not being passed to the scoreboard.|Corrected it so it passed the name as before it was not passing the name correctly|
 |Players could register with an email more than once|Added a function which loops through all emails|
-|Game would not load correctly due to an error with the questions|Made questions_answer into a class instead of a function which resolved the issue|
-|Message for the player not having a good score would not appear|Adjusted the score for the player so it checks for the correct amount|
+|Game would not load correctly due to an error with the questions|Converted Questions_Answer from a function into a class, resolving the issue.|
+|Message for the player not having a good score would not appear|Adjusted the scoring logic to ensure the correct message appears for low scores.|
 
 [Back to the Table of Contents](#Table-of-Content)
 
 ## Validation
-The original tool recommended by Code Institute([PEP8 Validator](http://pep8online.com/)) is down or has been taken off the internet, Therefore I used an online python code check called [pythonium](https://pythonium.net/linter) to check for any syntax errors and a library call [pycodestyle](https://pypi.org/project/pycodestyle/) to check for PEP8 validation:
+The original tool recommended by Code Institute([PEP8 Validator](http://pep8online.com/)), is down or has been taken off the internet, therefore I used an online Python code check called [pythonium](https://pythonium.net/linter) to check for any syntax errors and a library call [Pycodestyle](https://pypi.org/project/pycodestyle/) to check for PEP8 validation:
 
 <details>
  <summary>Run.py</summary>
@@ -766,17 +766,17 @@ Log in to your account at heroku.com.
 Create a new app, add a unique app name and choose your region.
 Click on create app.
 Go to "Settings".
-Under Config Vars store any sensitive data in .json file. Name 'Key' field, copy the .json file paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
+Under Config Vars store any sensitive data in .json file. Name 'Key' field, copy the .json file paste it to 'Value' field. Also add a key called 'PORT' with a value of '8000'.
 Add required buildpacks. For this project, I set up 'Python' and 'node.js' in that order.
 Go to "Deploy" and select "GitHub" in "Deployment method"
-To link up the Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+To connect the Heroku app to your GitHub repository, enter your repository name, click 'Search' and then 'Connect' when it shows below.
 Choose the branch you want to buid your app from.
 Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
 2. Click on Fork button in top right corner
-3. You will then have a copy of the repository in your own GitHub account.
+3. This will create a copy of the repository in your own GitHub account
 
 Making a Local Clone
 1. Go to the GitHub repository
@@ -794,18 +794,18 @@ Making a Local Clone
 - Favicon was used to format the icon into something useable for my websit
 
 ### Code
-- [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii) For allowing me to change an image to ASCII art.
+- [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii) Provided the tools to convert images into ASCII art.
 - Code Institute - for the Git template IDE and "Love Sandwiches" Project which helped with setting up the google sheet and google drive API.
 - [gspread documentation](https://docs.gspread.org/en/latest/user-guide.html) explained to me how to get a certain cells values which was immensly helpful.
 - [Stack Overflow](https://stackoverflow.com/questions) - Helped me with several errors and different fixes
 
 ## Acknowledgements
 
-First and foremost, I would like to give a special thank you to my wonderful girlfriend Jasmine, whose support has made managing a full-time job, Open University, and Code Institute submissions possible.
+First and foremost, I would like to give a special thank you to my wonderful girlfriend Jasmine, whose support made it possible for me to manage a full-time job, Open University, and Code Institute submissions simultaneously.
 
-Special thank you also to Mo Shami, My mentor, whose help and guidance has been truly invaluable to me.
+Special thanks also to Mo Shami, my mentor, for his invaluable help and guidance.
 
-The Live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
+The live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
 
 </br>
 
