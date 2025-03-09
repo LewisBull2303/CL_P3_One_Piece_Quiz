@@ -272,7 +272,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 <details>
  <summary>Screenshots</summary>
 
-
+![image](https://github.com/user-attachments/assets/2e3e8335-6535-403a-a7f7-3500cb012799)
+![image](https://github.com/user-attachments/assets/41098560-1006-4a00-ad6d-e3e6c2dbcd95)
 
 </details>
 
