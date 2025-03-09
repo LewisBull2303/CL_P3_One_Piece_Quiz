@@ -17,14 +17,14 @@
 4. [User Stories](#User-Stories)
     - [Users](#Users)
     - [Site Owner](#Site-Owner)
-5. [Technican Design](#Technican-Design)
+5. [Technical Design](#Technical-Design)
     - [Flowcharts](#Flowcharts)
 6. [User Guide](#User-Guide)
 7. [Technologies Used](#Technologies-Used)
     - [Languages](#Languages)
-    - [Frameworks & Tools](#Frameworks-&-Tools)
-    - [Python Libraries](#Python-Libraries)
-    - [Third Party Libraries](#Third-Party-Libraries)
+    - [Frameworks and Tools](#Frameworks-and-Tools)
+    - [Python libraries](#Python-libraries)
+    - [Third Party libraries](#Third-Party-Libraries)
 8. [Features](#Features)
 9. [Testing](#Testing)
      - [Manual Testing](#Manual-Testing)
@@ -201,7 +201,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 ### Languages
 - Python - programming language for the logic of the project, where the majority of the project is.
 
-### Frameworks & Tools
+### Frameworks and Tools
 - [Miro](https://miro.com/) was used to draw program flowchart
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
@@ -210,7 +210,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - [Heroku](https://www.heroku.com/) was used to load the project on to a website and hosting the website
 - [Visual Studio Code](https://code.visualstudio.com/) VSCode was used to write the project code
 
-### Python Libararies
+### Python Libraries
 - [os](https://docs.python.org/3/library/os.html) - Used to clear the terminal so it is less clogged and better looking
 - [random](https://docs.python.org/3/library/random.html#module-random) - Used to randomly select which questions will be asked to the user so each time the quiz is different
 - [time](https://docs.python.org/3/library/time.html#module-time) - Used to get the date to be stored in the scoreboard
@@ -798,6 +798,6 @@ First and foremost, I would like to give a special thank you to my wonderful gir
 
 Special thank you also to Mo Shami, My mentor, whose help and guidance has been truly invaluable to me.
 
-[Back to the Table of Contents](#Table-of-Content)
-
 The Live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
+<br>
+[Back to the Table of Contents](#Table-of-Content)
