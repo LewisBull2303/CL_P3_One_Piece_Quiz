@@ -183,6 +183,7 @@ def leaderboard():
     This function is called at the end of the game to see if the user
     would like to add their score to the leaderboard
     """
+    get_player_stats()
     add_score = input(
         "Would you like to add your score to the scoreboard? Y or N\n"
     ).lower()
