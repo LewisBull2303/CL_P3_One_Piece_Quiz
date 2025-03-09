@@ -382,9 +382,9 @@ When choosing to quit, the user exits the program with a goodbye message.
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
 |Main Menu|Option 1 - Play Game| Users are asked if they have played the game before|Works as expected|
-|Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
+|Main Menu|Option 2 - How to play|Users are presented with the game instructions and gameplay guidance.|Works as expected|
 |Main Menu|Option 3 - Scoreboard|Users are presented with the scoreboard|Works as expected|
-|Main Menu|Option 4 - Quit|The teminal quits and stops the game, and a message saying thank you for playing pops up|Works as expected|
+|Main Menu|Option 4 - Quit|The terminal quits and stops the game, and a message saying thank you for playing pops up|Works as expected|
 
 <details>
  <summary>Images</summary>
@@ -402,8 +402,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Main Menu|Option 2 - How to play| Users are presented with the game instructions and how to play|Works as expected|
-|Game Rule/Instructions|How to play option on the scoreboard| Users are presented with the game instructions and how to play|Works as expected|
+|Main Menu|Option 2 - How to play|Users are presented with the game instructions and gameplay guidance|Works as expected|
+|Game Rule/Instructions|How to play option on the scoreboard|Users are presented with the game instructions and how to play|Works as expected|
 
 <details>
  <summary>Images</summary>
@@ -467,8 +467,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs and incorrect option they are informed until the input is valid|Works as expected|
-|Feedback throughout the validation|Players are informed of incorrect inputs|When the user inputs incorrect information they are informed and validation will only continue when the input is correct|Works as expected|
+|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs an incorrect option they are informed until the input is valid|Works as expected|
+|Feedback throughout the validation|Players are informed of incorrect inputs|When the user inputs incorrect information, they are informed and validation will only continue when the input is correct|Works as expected|
 
 <details>
  <summary>Images</summary>
@@ -488,8 +488,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Scoreboard|Players are informed of their score at the end of the game|When the game ends the user is told their score and if it was over half the total achieveable score through 2 messages|Works as expected|
-|Main Menu|Option 2 - Scoreboard|When the player, Selects the scoreboard option they can see a table of all of the players and their scores, Including their own score|Works as expected|
+|Scoreboard|Players are informed of their score at the end of the game|When the game ends the user is told their score and if it was over half the total achievable score through two messages|Works as expected|
+|Main Menu|Option 2 - Scoreboard|When the player selects the scoreboard option they can see a table of all of the players and their scores, including their own score|Works as expected|
 <details>
  <summary>Images</summary>
 
@@ -517,7 +517,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Main Menu|Option 2 - Scoreboard|When the player, Selects the scoreboard option they can see a table of all of the players and their scores|Works as expected|
+|Main Menu|Option 2 - Scoreboard|When the player selects the scoreboard option they can see a table of all of the players and their scores|Works as expected|
 
 <details>
  <summary>Images</summary>
@@ -545,8 +545,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Main Game|Players are informed of incorrect answers|When the user gives and incorrect answer they are informed|Works as expected|
-|Main Game|Players are informed of correct answers|When the user gives and correct answer they are informed|Works as expected|
+|Main Game|Players are informed of incorrect answers|When the user gives an incorrect answer they are informed|Works as expected|
+|Main Game|Players are informed of correct answers|When the user gives a correct answer they are informed|Works as expected|
 
 <details>
  <summary>Images</summary>
@@ -601,7 +601,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs and incorrect option they are informed until the input is valid|Works as expected|
+|Feedback throughout the game|Players are informed of incorrect inputs|When the user inputs an incorrect option they are informed until their input is valid|Works as expected|
 |Feedback throughout the validation|Players are informed of incorrect inputs|When the user inputs incorrect information they are informed and validation will only continue when the input is correct|Works as expected|
 
 <details>
@@ -664,8 +664,8 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
-|Login|Players name is retrieved and a welcome message displayed|When the player logs in with their email, it is validated then the users name is fetched from the database then a welcome back message is displayed|Works as expected|
-|Registered|Players enter their name and a welcome message displayed|When the player registers they are asked for their name, once they enter their email and it is validated the user is displayed a welcome message with their name|Works as expected|
+|Login|Players name is retrieved and a welcome message displayed|When the player logs in with their email, it is validated, then the user's name is fetched from the database then a welcome back message is displayed|Works as expected|
+|Registered|Players enter their name and a welcome message displayed|When the player registers they are asked for their name, once they enter their email and it is validated, the user is displayed a welcome message|Works as expected|
 
 <details>
  <summary>Images</summary>
