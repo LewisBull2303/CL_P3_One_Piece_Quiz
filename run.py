@@ -158,7 +158,7 @@ def main_menu():
 
     elif selected_option == "2":
         clear_screen()
-        print("\nScoreboard")
+        print("\nScoreboard: Top 10 Players")
         scoreboard_data = SORTED_SCOREBOARD.get_all_values()
         print(tabulate(scoreboard_data))
         input(Col.YELLOW + "Press any key to return:\n")
