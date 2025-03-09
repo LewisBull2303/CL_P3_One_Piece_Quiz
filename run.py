@@ -271,8 +271,8 @@ who always carries three katanas with him?\n \
      3) Sengoku\n ",
     "What is the name of the warden at Impel Down?\n \
      1) Buggy\n \
-     2) Shiryu\n \
-     3) Magellan\n ",
+     2) Magellan\n \
+     3) Shiryu\n ",
     """What is the name of the dragon that helped the straw hats
 climb to Zou?\n \
      1) Nekozaemon\n \
