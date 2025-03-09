@@ -803,6 +803,8 @@ Making a Local Clone
 
 First and foremost, I would like to give a special thank you to my wonderful girlfriend Jasmine, whose support made it possible for me to manage a full-time job, Open University, and Code Institute submissions simultaneously.
 
+Huge thank you to Dylan for helping to playtest the quiz and finding a few bugs which I was able to fix!
+
 Special thanks also to Mo Shami, my mentor, for his invaluable help and guidance.
 
 The live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
