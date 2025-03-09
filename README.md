@@ -5,7 +5,7 @@
 
 ![image](https://github.com/user-attachments/assets/b78d9940-96a3-4277-a735-b7ad8acd5814)
 
-## Table of Content
+## Table of Contents
 
 1. [About](#About)
 2. [Project Goals](#Project-Goals)
@@ -52,30 +52,30 @@ The objective of the game is to answer as many questions correctly as possible. 
 
 ### User Goals
 
-Play a fun and engaging game by answering One Piece trivia
-Read and understand the rules of the quiz game
-Track progress and score throughout the game
+Play a fun and engaging game by answering One Piece trivia questions.
+Read and understand the rules of the quiz game.
+Track progress and score throughout the game.
 
 ### Site Owner Goals
 
-Create a game that is easy to play and clear to the user
-Ensure that players understand the objective of the quiz game
+Create a game that is easy to play and clear to the user.
+Ensure that players understand the objectives of the quiz game.
 Provide feedback to the player during gameplay (e.g., correct/incorrect answers, score updates)
-Offer an enjoyable and interactive experience for One Piece fans
+Offer an enjoyable and interactive experience for One Piece fans.
 
 [Back to the Table of Contents](#Table-of-Content)
 
 ## User Experience
 
 ### Target Audience
-The target audience of this game is One Piece fans of all ages. This is because the trivia is all based around One Piece and 
+The target audience of this game is One Piece fans of all ages. This is because the trivia is all based around One Piece.
 
 ### User Requirements and Expectations
 
-A simple, fun and error-free game experience
-Easy and intuitive navigation through the quiz
-The ability to personalize the game by entering the player's name
-Clear feedback on game results (e.g., correct/incorrect answers, final score)
+A simple, fun, and error-free game experience.
+Easy and intuitive navigation through the quiz.
+The ability to personalize the game by entering the player's name.
+Clear feedback on game results (e.g., correct or incorrect answers, final score)
 
 [Back to the Table of Contents](#Table-of-Content)
 
@@ -86,7 +86,7 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 2. As a user, I want to be able to read the rules and have instructions for the game
 3. As a user, I want to be able to enter my name
 4. As a user, I want to be able to enter my email
-5. As a user, I want the game to catch if I enter my email after I already registered
+5. As a user, I want the game to catch if I enter my email after I have already registered
 6. As a user, I want feedback throughout the game
 7. As a user, I want to know my score
 8. As a user, I want to be able to play multiple times after logging in
@@ -94,11 +94,11 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 10. As a user, I want to be able to login if I return
 
 ### Site Owner 
-11. As a site owner, I want user to have feedback from the game in real-time 
+11. As a site owner, I want users to have feedback from the game in real-time
 12. As a site owner, I want my UI to be obvious and easy to navigate for my users
-13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+13. As a site owner, I want the users' names and emails to be saved in a Google spreadsheet
 14. As a site owner, I want the user to know if there was a wrong input
-15. As a site owner, I want the users data to be validated to check if its correct
+15. As a site owner, I want the users' data to be validated to check if it's correct
 16. As a site owner, I want the user to be able to choose if they want to upload their score
 17. As a site owner, I want the user to be able to login after closing the game
 18. As a site owner, I want the user to be welcomed to the game
@@ -109,7 +109,7 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 
 ### Flowcharts:
 
-The below flowcharts detail the process for the validation of the user, and how they login and register. The second flowchart details the main game function process.
+The following flowcharts detail the process for user validation, and how they log in and register.. The second flowchart details the main game function process.
 <details>
  <summary>Flowcharts</summary>
 
@@ -447,7 +447,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
-5. As a user, I want the game to catch if I enter my email after I already registered
+5. As a user, I want the game to catch if I enter my email after I have already registered
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
@@ -541,7 +541,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
-11. As a site owner, I want user to have feedback from the game in real-time
+11. As a site owner, I want users to have feedback from the game in real-time
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
@@ -582,7 +582,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
-13. As a site owner, I want the users names and emails to be saved in a google spreadsheet
+13. As a site owner, I want the users' names and emails to be saved in a Google spreadsheet
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
@@ -618,7 +618,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
  
-15. As a site owner, I want the users data to be validated to check if its correct
+15. As a site owner, I want the users' data to be validated to check if it's correct
 
 |Feature|Action|Expected Result|Outcome|
 |---|---|---|---|
