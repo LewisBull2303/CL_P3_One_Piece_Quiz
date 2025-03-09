@@ -799,5 +799,5 @@ First and foremost, I would like to give a special thank you to my wonderful gir
 Special thank you also to Mo Shami, My mentor, whose help and guidance has been truly invaluable to me.
 
 The Live link to this repository can be found here - https://github.com/LewisBull2303/CL_P3_One_Piece_Quiz
-<br>
+</br>
 [Back to the Table of Contents](#Table-of-Content)
