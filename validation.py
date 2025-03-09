@@ -65,9 +65,6 @@ def get_email() -> str:
         clear_screen()
         if validate_user_email(email):
             break
-        else:
-            print("Please try again")
-            validate_user_email(email)
 
     return email
 
