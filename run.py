@@ -9,6 +9,7 @@ from colors import Colors as Col
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
 
+# Google Sheets API Scope and Authentication
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -78,6 +79,7 @@ def quiz_start(questions):
     score = 0
     for question in questions_list:
         answer = input(question.cue).lower()
+        # Ensuring valid input for answer choices
         if answer not in {"1", "2", "3", "4"}:
             print(Col.RED + "Wrong Answer\n Please use 1, 2 or 3 to answer!\n")
             answer = input(question.cue).lower()
@@ -238,7 +240,7 @@ def print_loading():
     print("\nLoading...\n")
     print("=" * 30)
 
-
+# List of questions with multiple choices
 questions_call = [
     "What is the name of the main protagonist in One Piece?\n \
      1) Luffy\n \
@@ -366,7 +368,7 @@ in the sabaody archipelago arc?\n \
      2) Luffy\n \
      3) Momonosuke\n ",
 ]
-
+# Gets the questions and assigns them all an answer
 questions = [
     questions_answer(questions_call[0], "1"),
     questions_answer(questions_call[1], "1"),
@@ -400,7 +402,7 @@ questions = [
     questions_answer(questions_call[29], "3"),
 ]
 
-
+# Initialize the score and start the game
 score = 0
 clear_screen()
 ascii_logo()
