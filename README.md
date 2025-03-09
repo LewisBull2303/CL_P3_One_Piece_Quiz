@@ -30,7 +30,7 @@
      - [Manual Testing](#Manual-Testing)
 10. [Testing Across Different Devices and Browsers](#Testing-Across-Different-Devices-and-Browsers)
     - [Devices](#Devices)
-    - [Browser Compatibility](#Browser-Compatibility)
+    - [Browser Compatibility Tests](#Browser-Compatibility-Tests)
     - [Testing Overview](#Testing-Overview)
 11. [Bugs](#Bugs)
 12. [Validation](#Validation)
