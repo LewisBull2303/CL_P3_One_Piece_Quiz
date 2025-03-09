@@ -1,4 +1,4 @@
-# ONE PIECE QUIZ GAME
+![image](https://github.com/user-attachments/assets/12c50cad-d00a-41b8-96fd-009f766ef5e8)# ONE PIECE QUIZ GAME
 ## Developer: Lewis Bull
 
 [Live Website Link](https://clp3onepiecequiz-fb7dc9e72670.herokuapp.com/)
@@ -187,20 +187,48 @@ When choosing to quit, the user exits the program with a goodbye message.
 - Gives the user the autonomy on what they what they want to do.
 - User Stories Answered:1
 
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/b886e4b7-5599-4994-afb5-91a90b73f331)
+
+</details>
+
 ### Game Rule/Instructions
 - Clearly shows the rules of the game and how to play.
 - Allows the user to return when they type any key.
 - User Stories Answered: 1, 2
+
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/af8d537f-13af-4ac8-a1b6-3043c150d60c)
+
+</details>
 
 ### Scoreboard
 - Clearly shows all of the users who have passed the game before and their scores
 - Updates the scoreboard based on the highest score
 - User Stories Answered: 7, 9
 
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/40d600af-ff93-4dbd-8ee1-f5ae27b5c4c6)
+
+</details>
+
 ### Play Game
 - When the user starts the game they are asked if they have played the game before.
 - The user can select yes or no and each option takes the user to a different part of the validation.
 - User Stories Answered: 1, 8, 10
+
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/2d27113d-a859-4c92-b1a9-735d8ab68b9f)
+
+</details>
 
 ### Login
 - If the user says they have played before they are taken to the login part of the validation.
@@ -209,6 +237,17 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the email is found already registered, I will log the user in and display a welcome message with the users name.
 - User Stories Answered: 3, 4, 5, 10, 13, 15, 17
 
+<details>
+ <summary>Screenshots</summary>
+ 
+![image](https://github.com/user-attachments/assets/4597b620-51cf-43dd-abc9-51cae1734e62)
+![image](https://github.com/user-attachments/assets/3e069c14-1c1f-4fee-8b51-4516e4f70177)
+![image](https://github.com/user-attachments/assets/2e3e8335-6535-403a-a7f7-3500cb012799)
+![image](https://github.com/user-attachments/assets/3741bd80-80ac-448b-8963-e5aea82562bb)
+![image](https://github.com/user-attachments/assets/ad872dc0-6d8a-46b1-9c9c-07d6322e8c15)
+
+</details>
+
 ### Register a New User
 - If the user says they have not played before they will be taken to the register part of the validation.
 - The user will be prompted to enter their name.
@@ -216,9 +255,26 @@ When choosing to quit, the user exits the program with a goodbye message.
 - The users email will be validated to make sure that it has an @ sign and a . in it.
 - User Stories Answered: 3, 4, 5, 
 
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/b545fcd5-ca12-4448-9a59-bb4311effbc4)
+![image](https://github.com/user-attachments/assets/07915317-94c4-40f8-8bb5-69b2b335572a)
+![image](https://github.com/user-attachments/assets/7d242e4c-79c8-480e-9684-550d4172c10d)
+![image](https://github.com/user-attachments/assets/41098560-1006-4a00-ad6d-e3e6c2dbcd95)
+
+</details>
+
 ### User Greeting
-- Once the user has logged in they will be displayed a welcom message with their name.
+- Once the user has logged in they will be displayed a welcome message with their name.
 - User Stories Answered: 18
+
+<details>
+ <summary>Screenshots</summary>
+
+
+
+</details>
 
 ### Main Game:
 - The main part of the game is answering the quiz questions.
@@ -227,6 +283,15 @@ When choosing to quit, the user exits the program with a goodbye message.
 - The users score will be calculated based on how many answers they got correct.
 - After it is complete the user will be given the option to add their score to the scoreboard.
 - User Stories Answered: 1, 6, 7, 11, 12, 14, 16
+
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/3f9d118a-2d88-41ae-b311-98efd3832ec1)
+![image](https://github.com/user-attachments/assets/c1544070-1e42-4e86-8235-e32c9e2c164e)
+![image](https://github.com/user-attachments/assets/33aa66ae-d9f6-4507-896e-9eec18d2f417)
+
+</details>
 
 ### Add Score to Scoreboard
 - When the user is finished playing the game, a custom message will be displayed depending on their score.
@@ -237,9 +302,25 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
 - User Stories Answered: 7, 16
 
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/47a9229c-078e-4ed2-aa4a-7cec3416ebec)
+![image](https://github.com/user-attachments/assets/0290d051-17dd-4dc7-9c02-af588b9cb208)
+
+</details>
+
 ### Quit game
 - On the main menu the user can choose to quit the game which will display a goodbye message.
 - User Stories Answered: 12
+
+<details>
+ <summary>Screenshots</summary>
+
+![image](https://github.com/user-attachments/assets/d6437219-29da-4c58-bca6-6a75e4d92601)
+![image](https://github.com/user-attachments/assets/e301741f-ad07-48ca-a17b-3dbe3182942c)
+
+</details>
 
 ## Testing
 
