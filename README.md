@@ -202,28 +202,28 @@ When choosing to quit, the user exits the program with a goodbye message.
 ## Technologies Used
 
 ### Languages
-- Python - programming language for the logic of the project, where the majority of the project is.
+- Python - Programming language used for the project's logic, where the majority of the project is implemented.
 
 ### Frameworks and Tools
-- [Miro](https://miro.com/) was used to draw program flowchart
-- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [Miro](https://miro.com/) Miro was used to draw the program flowchart.
+- [Git](https://git-scm.com/) Git was used for version control within VSCode to push code to GitHub.
 - [GitHub](https://github.com/) was used as a remote repository to store project code
-- [Google Cloud Platform](https://cloud.google.com/) was used to manage access and permissions to the Google Services such as Google auth, sheets etc.
-- [Google Sheets](https://docs.google.com/spreadsheets/u/0/) was used to store users details
-- [Heroku](https://www.heroku.com/) was used to load the project on to a website and hosting the website
-- [Visual Studio Code](https://code.visualstudio.com/) VSCode was used to write the project code
+- [Google Cloud Platform](https://cloud.google.com/) Google Cloud Platform was used to manage access and permissions to Google services such as Google Auth, Sheets, etc.
+- [Google Sheets](https://docs.google.com/spreadsheets/u/0/) Google Sheets was used to store user details.
+- [Heroku](https://www.heroku.com/) Heroku was used to deploy the project to a website and host it.
+- [Visual Studio Code](https://code.visualstudio.com/) Visual Studio Code (VSCode) was used to write the project code.
 
 ### Python Libraries
-- [os](https://docs.python.org/3/library/os.html) - Used to clear the terminal so it is less clogged and better looking
-- [random](https://docs.python.org/3/library/random.html#module-random) - Used to randomly select which questions will be asked to the user so each time the quiz is different
-- [time](https://docs.python.org/3/library/time.html#module-time) - Used to get the date to be stored in the scoreboard
+- [os](https://docs.python.org/3/library/os.html) - Used to clear the terminal, making it less cluttered and more visually appealing.
+- [random](https://docs.python.org/3/library/random.html#module-random) - Used to randomly select the questions that will be asked, ensuring the quiz is different each time.
+- [time](https://docs.python.org/3/library/time.html#module-time) - Used to capture the date, which is stored on the scoreboard.
   
 ### Third Party Libraries
-- [Colorama](https://pypi.org/project/colorama/) - Colorama was used to add color and more life to my game which will make it more interesting and engaging to the user
-- [Email_Validator](https://pypi.org/project/email-validator/) - I used this to check if the user is entering a valid email and if not to bring up an error
-- [Gspread](https://docs.gspread.org/_/downloads/en/v5.6.0/pdf/) - This was used to append rows to the database which is a google spreadsheet. It was also used to fetch existing information from the database
-- [Google.Oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  Module used to set up the authentication between the database and the user. It was needed in order to store data. A creds.json file was created with all of the details the API needs and was passed into the configs in heroku
-- [Tabultate](http://pypi.org/project/tabulate/) - This was used to print our the scoreboard in an easy manner that looks good to the user.
+- [Colorama](https://pypi.org/project/colorama/) - Colorama - Used to add color and enhance the visual appeal of the game, making it more interesting and engaging for the user.
+- [Email_Validator](https://pypi.org/project/email-validator/) - Used to check if the user is entering a valid email, and if not, an error message is displayed.
+- [Gspread](https://docs.gspread.org/_/downloads/en/v5.6.0/pdf/) - Used to append rows to a Google Spreadsheet database and fetch existing information from it.
+- [Google.Oauth2.service_account](https://google-auth.readthedocs.io/en/master/) -  Module used to set up authentication between the database and the user. It was necessary for storing data. A creds.json file containing the API details was created and passed into the Heroku configuration.
+- [Tabulate](http://pypi.org/project/tabulate/) - Used to display the scoreboard in a clear and visually appealing way.
 
 [Back to the Table of Contents](#Table-of-Content)
 
@@ -231,9 +231,9 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 ### Main Menu
 - Gives the user 4 options to choose from when they first load up the game.
-- Gives the user a welcom message and shows off the ASCII Logo.
-- Gives the user the autonomy on what they what they want to do.
-- User Stories Answered:1
+- Gives the user a welcome message and displays the ASCII logo.
+- Gives the user autonomy over what they want to do.
+- User Stories Answered: 1
 
 <details>
  <summary>Screenshots</summary>
@@ -326,7 +326,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 
 ### Main Game:
-- The main part of the game is answering the quiz questions.
+- The main part of the game involves answering quiz questions.
 - Once the user has logged in/registered, the game will start.
 - The user will be asked 15 out of 30 questions randomly selected, and the player will need to answer all of them.
 - The users score will be calculated based on how many answers they got correct.
@@ -347,7 +347,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 - If the player scores below half the total points it will tell them that they need to study more.
 - If the player scores more than half the available points the game will congratulate them.
 - The user is then asked if they want to add their score to the scoreboard.
-- If the user chooses no, then nothing will happen and the user will be prompted to press any key to return to the main menu.
+- If the user chooses 'No', nothing will happen, and the user will be prompted to press any key to return to the main menu.
 - If the user chooses yes then their score will be added to the score board and then the user will be prompted to press any key to return to the main menu.
 - User Stories Answered: 7, 16
 
@@ -360,7 +360,7 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 
 ### Quit game
-- On the main menu the user can choose to quit the game which will display a goodbye message.
+- On the main menu, the user can choose to quit the game, which will display a goodbye message.
 - User Stories Answered: 12
 
 <details>
