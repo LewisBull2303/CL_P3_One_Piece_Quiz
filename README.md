@@ -35,7 +35,7 @@
 13. [Credits](#Credits)
      - [Images](#Images)
      - [Code](#Code)
-14. Acknowledgements(#Acknowledgements)
+14. [Acknowledgements](#Acknowledgements)
 
 ## About
 This is a command-line version of a One Piece-themed quiz game for a single player.
