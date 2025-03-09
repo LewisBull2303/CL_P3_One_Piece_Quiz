@@ -5,6 +5,38 @@
 
 ![image](https://github.com/user-attachments/assets/b78d9940-96a3-4277-a735-b7ad8acd5814)
 
+## Table of Content
+
+1. [About](#About)
+2. [Project Goals](#Project-Goals)
+    - [User Goals](#User-Goals)
+    - [Site Owner Goals](#Site-Owner-Goals)
+3. [User Experience](#User-Experience)
+    - [Target Audience](#Target-Audience)
+    - [User Requirements and Expectations](#User-Requirements-and-Expectations)
+4. [User Stories](#User-Stories)
+    - [Users](#Users)
+    - [Site Owner](#Site-Owner)
+5. [Technican Design](#Technican-Design)
+    - [Flowcharts](#Flowcharts)
+6. [User Guide](#User-Guide)
+7. [Technologies Used](#Technologies-Used)
+    - [Languages](#Languages)
+    - [Frameworks & Tools](#Frameworks-&-Tools)
+    - [Python Libraries](#Python-Libraries)
+    - [Third Party Libraries](#Third-Party-Libraries)
+8. [Features](#Features)
+9. [Testing](#Testing)
+     - [Manual Testing](#Manual-Testing)
+10. [Bugs](#Bugs)
+11. [Validation](#Validation)
+12. [Deployment](#Deployment)
+     - [Heroku Deployment](#Heroku-Deployment)
+13. [Credits](#Credits)
+     - [Images](#Images)
+     - [Code](#Code)
+14. Acknowledgements(#Acknowledgements)
+
 ## About
 This is a command-line version of a One Piece-themed quiz game for a single player.
 
@@ -66,6 +98,8 @@ Clear feedback on game results (e.g., correct/incorrect answers, final score)
 ## Technical Design
 
 ### Flowcharts:
+
+The below flowcharts detail the process for the validation of the user, and how they login and register. The second flowchart details the main game function process.
 <details>
  <summary>Flowcharts</summary>
 
