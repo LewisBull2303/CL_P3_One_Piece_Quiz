@@ -66,6 +66,9 @@ def get_email() -> str:
         clear_screen()
         if validate_user_email(email):
             break
+        else:
+            print("Please try again")
+            validate_user_email(email)
 
     return email
 
@@ -84,7 +87,6 @@ def validate_user_email(email: str):
     except EmailNotValidError as e:
         print(str(e))
         print(Col.RED + "Sorry, this email is not valid. Please try again!\n")
-        get_email()
         return False
 
 

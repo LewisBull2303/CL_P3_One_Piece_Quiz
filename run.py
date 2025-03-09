@@ -20,7 +20,8 @@ CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("quiz_leaderboard")
-SCOREBOARD = SHEET.worksheet("scores")
+SCOREBOARD = SHEET.worksheet("unsorted_scores")
+SORTED_SCOREBOARD = SHEET.worksheet("scoreboard")
 PLAYER_SHEET = SHEET.worksheet("users")
 
 score = 0
@@ -28,7 +29,7 @@ player_score = []
 today = datetime.now()
 date = today.strftime("%d/%m/%y")
 
-scoreboard_data = SCOREBOARD.get_all_values()
+scoreboard_data = SORTED_SCOREBOARD.get_all_values()
 
 
 def ascii_logo():
@@ -80,7 +81,7 @@ def quiz_start(questions):
     for question in questions_list:
         answer = input(question.cue).lower()
         # Ensuring valid input for answer choices
-        if answer not in {"1", "2", "3", "4"}:
+        if answer not in {"1", "2", "3"}:
             print(Col.RED + "Wrong Answer\n Please use 1, 2 or 3 to answer!\n")
             answer = input(question.cue).lower()
 
@@ -104,15 +105,15 @@ def get_player_stats():
         print(
             Col.GREEN
             + f"""\nCongratulations {player_stats['Name']}
-you scored {player_stats['Score']}
-you are a true one piece fan!\n"""
+You scored {player_stats['Score']}
+You are a true one piece fan!\n"""
         )
     else:
         print(
             Col.RED
             + f"""\nOh no {player_stats['Name']}
-you only scored {player_stats['Score']}
-you need to go back and study!\n"""
+You only scored {player_stats['Score']}
+You need to go back and study!\n"""
         )
 
 
@@ -160,11 +161,11 @@ def main_menu():
 
     elif selected_option == "2":
         clear_screen()
-        ascii_logo()
         print("\nScoreboard")
         print(tabulate(scoreboard_data))
         input(Col.YELLOW + "Press any key to return:\n")
         clear_screen()
+        ascii_logo()
         main_menu()
 
     elif selected_option == "3":
@@ -182,7 +183,6 @@ def leaderboard():
     This function is called at the end of the game to see if the user
     would like to add their score to the leaderboard
     """
-    get_player_stats()
     add_score = input(
         "Would you like to add your score to the scoreboard? Y or N\n"
     ).lower()
