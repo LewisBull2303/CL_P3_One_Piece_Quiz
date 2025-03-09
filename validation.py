@@ -17,7 +17,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('quiz_leaderboard')
-SCOREBOARD = SHEET.worksheet('scores')
 USER_SHEET = SHEET.worksheet('users')
 
 # Global variables to store user information
@@ -241,25 +240,6 @@ def email_not_registered() -> str:
         print(Col.RED + "Please choose between one of the options:")
         email_option = input(options)
     return email_option
-
-
-def total_scores():
-    """
-    Calculates the total scores of all players from the spreadsheet.
-    This is useful for leaderboard statistics.
-    """
-    score_column = SCOREBOARD.col_values(2)
-    total_score = 0
-
-    # Remove the header from the column
-    del score_column[0]
-    score_column = list(map(int, score_column))
-
-    # Calculate total score
-    for i in score_column:
-        total_score += i
-
-    return total_score
 
 
 def check_emails(email: str) -> bool:
