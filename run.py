@@ -29,9 +29,6 @@ player_score = []
 today = datetime.now()
 date = today.strftime("%d/%m/%y")
 
-scoreboard_data = SORTED_SCOREBOARD.get_all_values()
-
-
 def ascii_logo():
     """
     This will be my function to print my logo out to the terminal
@@ -162,6 +159,7 @@ def main_menu():
     elif selected_option == "2":
         clear_screen()
         print("\nScoreboard")
+        scoreboard_data = SORTED_SCOREBOARD.get_all_values()
         print(tabulate(scoreboard_data))
         input(Col.YELLOW + "Press any key to return:\n")
         clear_screen()
