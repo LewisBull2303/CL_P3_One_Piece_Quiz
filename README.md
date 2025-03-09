@@ -28,7 +28,10 @@
 8. [Features](#Features)
 9. [Testing](#Testing)
      - [Manual Testing](#Manual-Testing)
-10. [Testing Across Different Devices/Browsers](#Testing-Across-Different-Devices/Browsers)
+10. [Testing Across Different Devices and Browsers](#Testing-Across-Different-Devices-and-Browsers)
+    - [Devices](#Devices)
+    - [Browser Compatibility](#Browser-Compatibility)
+    - [Testing Overview](#Testing-Overview)
 11. [Bugs](#Bugs)
 12. [Validation](#Validation)
 13. [Deployment](#Deployment)
@@ -677,7 +680,9 @@ When choosing to quit, the user exits the program with a goodbye message.
 
 [Back to the Table of Contents](#Table-of-Content)
 
-## Testing Across Different Devices/Browsers
+## Testing Across Different Devices and Browsers
+
+### Devices
 The following devices were used to test the One Piece Quiz:
 
 - iPhone 13 (Physical)
