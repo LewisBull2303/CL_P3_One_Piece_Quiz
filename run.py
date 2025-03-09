@@ -82,7 +82,7 @@ def quiz_start(questions):
         answer = input(question.cue).lower()
         # Ensuring valid input for answer choices
         while answer not in {"1", "2", "3"}:
-            print(Col.RED + "Wrong Answer\n Please use 1, 2 or 3 to answer!\n")
+            print(Col.RED + "Wrong Answer\nPlease use 1, 2 or 3 to answer!\n")
             answer = input(question.cue).lower()
 
         if answer == question.answer:
