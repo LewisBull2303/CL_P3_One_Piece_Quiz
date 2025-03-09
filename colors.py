@@ -2,7 +2,7 @@ from colorama import init
 
 init(autoreset=True)
 
-
+# Store all of the colors for use in the game
 class Colors:
     BLUE = "\033[34;49m"
     BLUE_BG = "\033[48;5;4m"
