@@ -790,8 +790,8 @@ Making a Local Clone
 ## Credits
 
 ### Images
-- Flaticon was used to finding an icon for my page
-- Favicon was used to format the icon into something useable for my websit
+- [Flaticon](https://www.flaticon.com/) was used to finding an icon for my page
+- [Favicon](https://favicon.io/) was used to format the icon into something useable for my websit
 
 ### Code
 - [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii) Provided the tools to convert images into ASCII art.
