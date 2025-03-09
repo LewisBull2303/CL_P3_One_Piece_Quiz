@@ -127,9 +127,9 @@ The following flowcharts detail the process for user validation, and how they lo
  <summary>See the user manual here</summary>
  
 ### Main Menu
-When launching the game, users are greeted with a main menu featuring an ASCII art rendering of the jolly rodger of the Strawhat Pirates. Below this graphic, several options are provided.
+When launching the game, users are greeted with a main menu featuring an ASCII art rendering of the Jolly Roger of the Strawhat Pirates. Below this graphic, several options are provided.
 
-Operation: Input a numeric value and press the enter key to select an option.
+Operation: Input a numeric value and press the Enter key to select an option.
 
 Play Game
 View Scoreboard
@@ -141,19 +141,19 @@ At any point, if a user enters a number that doesn't correspond to a valid optio
 ### Play Game
 When choosing the “Play Game” option, users are asked if they have played the game before.
 
-Yes (1)
+Yes (1), 
 No (2)
+
 If "Yes" (1) is selected
 If the user has played the game before, they will be prompted to log in using their email address if they have already registered.
 
-Player is asked for their email address.
+The player is asked for their email address..
 The system checks whether the email is registered.
-If the email is not found
-Players can choose one of the following options:
+If the email is not found, players can choose one of the following options:
 
 Try another email (1)
 Create a new user (2)
-The user can continue to try different emails until they are matched with an existing one. Once a correct email is entered, a personalized greeting is displayed with the player’s name.
+The user can continue to try different emails until they are matched with an existing one. Once a correct email is entered, a personalized greeting with the player's name is displayed."
 
 If "No" (2) is selected
 If the user has never played before, they are given the option to create a new account.
@@ -168,23 +168,23 @@ Email must be valid, containing exactly one "@" symbol and have a .com or .co.uk
 The email address must not already exist in the database.
 
 ### Game Start
-Once the player has logged in, the system greets them by name and the game begins.
+Once the player has logged in, the system greets them by name, and the game begins.
 
 ### Quiz
-Once the game starts the user will bew given 15 multiple choice questions all around the world of one piece, it will cover the story arcs, characters and lore of the one piece universe. Once the player has answered all of the questions the game will ask them if they want to submit their score to the scoreboard.
+Once the game starts, the user will be given 15 multiple-choice questions all around the world of One Piece. It will cover the story arcs, characters, and lore of the One Piece universe. Once the player has answered all of the questions, the game will ask them if they want to submit their score to the scoreboard.
 
 ### Scoreboard/Game Over:
-When the game ends the player can select if they want to add their score to the scoreboard the options are:
+When the game ends, the player can select if they want to add their score to the scoreboard. The options are:
 1) Yes
-  If yes is chosen then the players name, score and the date they played will be uploaded to the scoreboard and sorted in the scoreboard for the highest score.
+  If 'Yes' is chosen, then the player's name, score, and the date they played will be uploaded to the scoreboard and sorted by the highest score.
 2) No
-If no is chosen the player will be able to press any key and be returned to the main menu where they can play again if they want.
+If 'No' is chosen, the player will be able to press any key and return to the main menu, where they can play again if they want.
 
 ### Go to Main Menu
-This option brings players back to the main menu of the program, where they can choose to view the rules, play another game, or quit.
+This option brings players back to the main menu, where they can choose to view the rules, play another game, or quit.
 
 ### Game Rules
-In this section, players can review the game rules. After reading, they can return to the main menu.
+In this section, players can review the game rules. After reading them, they can return to the main menu.
 
 Operation: Press any key and then enter to go back to the main menu.
 
