@@ -656,6 +656,24 @@ When choosing to quit, the user exits the program with a goodbye message.
 </details>
 </br>
 
+18. As a site owner, I want the user to be welcomed to the game
+
+|Feature|Action|Expected Result|Outcome|
+|---|---|---|---|
+|Login|Players name is retrieved and a welcome message displayed|When the player logs in with their email, it is validated then the users name is fetched from the database then a welcome back message is displayed|Works as expected|
+|Registered|Players enter their name and a welcome message displayed|When the player registers they are asked for their name, once they enter their email and it is validated the user is displayed a welcome message with their name|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+![image](https://github.com/user-attachments/assets/74b5b7f2-63d2-40cb-a002-385cd3f9f568)
+![image](https://github.com/user-attachments/assets/f27432c6-151c-4b50-ae5e-dbf8a68d1900)
+![image](https://github.com/user-attachments/assets/c5147203-87ed-4900-8ee2-f53073bc0dd8)
+![image](https://github.com/user-attachments/assets/3568e6a6-204b-4d97-8cfc-726d1ae39aeb)
+
+</details>
+</br>
+
 [Back to the Table of Contents](#Table-of-Content)
 
 ## Bugs
